@@ -1,2 +1,6 @@
 ---
-permalink : http://corrugatediron.org/
+permalink    : http://corrugatediron.org/
+markdown     : rdiscount
+pygments     : true
+pagination   : 5
+permalink    : /blog/:title
