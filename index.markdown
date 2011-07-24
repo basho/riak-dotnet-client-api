@@ -46,5 +46,5 @@ What are you interested in?
 [repo]: https://github.com/DistributedNonsense/CorrugatedIron/ "Current CorrugatedIron Repo"
 [Riak]: http://riak.basho.com/ "Riak"
 [email]: mailto:distributednonsense@buffered.io "Contact the guys"
-[documentation]: /documentation/ "CorrugatedIron Documentation"
+[documentation]: /documentation/Basics.Installation.html "CorrugatedIron Documentation"
 [Basho]: http://www.basho.com/ "Basho Technologies"
