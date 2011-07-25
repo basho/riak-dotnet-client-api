@@ -24,4 +24,4 @@ For two views on the history of CorrugatedIron and it's conception, have a read 
 [Basho]: http://www.basho.com/ "Basho Technologies"
 [definition]: http://en.wikipedia.org/wiki/Corrugated_galvanised_iron "Corrugated Iron"
 [oj_story]: http://buffered.io/posts/introducing-corrugatediron "Introducing CorrugatedIron"
-[jp_story]: http://facility9.com/
+[jp_story]: http://www.brentozar.com/archive/2011/07/just-one-more-thing-introducing-corrugatediron/
