@@ -46,14 +46,15 @@ This will pull down the source and update your working folder to the latest stab
 
 ## Summing it up ##
 
-Getting hold of CorrugatedIron and including it in your project is really simple. Next, you'll need to [configure it][ci_config]!
+Getting hold of CorrugatedIron and including it in your project is really simple. Next, you'll need to get [connected][ci_connecting]!
 
 
+[Json.NET]: http://json.codeplex.com "Json.NET"
+[Manos]: https://github.com/jacksonh/manos/ "Manos"
+[Nuget]: http://nuget.org/ "Nuget"
 [ci]: http://github.com/DistributedNonsense/CorrugatedIron "CorrugatedIron at Github"
-[ci_configure]: /path/to/the/configuration/page.html
+[ci_connecting]: /documentation/Basics.Connecting.html
 [ci_download]: http://github.com/DistributedNonsense/CorrugatedIron/downloads "CorrugatedIron downloads at Github"
 [ci_nuget]: http://nuget.org/List/Packages/CorrugatedIron "CorrugatedIron Package at Nuget"
-[Nuget]: http://nuget.org/ "Nuget"
-[Json.NET]: http://json.codeplex.com "Json.NET"
+[git]: http://git-scm.org/ "Git"
 [protobuf-net]: http://code.google.com/p/protobuf-net/ "protobuf-net"
-[Manos]: https://github.com/jacksonh/manos/ "Manos"

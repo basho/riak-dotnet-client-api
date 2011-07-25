@@ -15,6 +15,13 @@ When we first kicked this project off we knew we were attempting to bring togeth
 
 So that's where the name comes from.
 
+How did it come about?
+----------------------
+
+For two views on the history of CorrugatedIron and it's conception, have a read of [Jeremiah's post][jp_story] and [OJ's post][oj_story].
+
 [Riak]: http://riak.basho.com/ "Riak"
 [Basho]: http://www.basho.com/ "Basho Technologies"
 [definition]: http://en.wikipedia.org/wiki/Corrugated_galvanised_iron "Corrugated Iron"
+[oj_story]: http://buffered.io/posts/introducing-corrugatediron "Introducing CorrugatedIron"
+[jp_story]: http://www.brentozar.com/archive/2011/07/just-one-more-thing-introducing-corrugatediron/
