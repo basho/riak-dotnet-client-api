@@ -37,17 +37,17 @@ Now that you can (hopefully) talk to Riak, the next step is to set up the config
 
 #### Manual Installation and Configuration ####
 
-In your `web.config` or `app.config` create a configuration section for Riak:
+In your configuration file, create a configuration section for Riak:
 
     <configSections>
       <section name="riakConfig" type="CorrugatedIron.Config.RiakClusterConfiguration, CorrugatedIron"/>
     </configSections>
 
-There are some niceties built into [CorrugatedIron][ci] to make it very easy to import your Riak settings and create a RiakClient object using an IoC container. More on that in a minute...
+There are some niceties built into [CorrugatedIron][ci] to make it very easy to import your Riak settings and create a RiakClient easily. More on that in a minute...
 
 You've told your application to expect a configuration section, now actually add the configuration section:
 
-    <riakConfig>
+    <riakConfig nodePollTime="5000" defaultRetryWaitTime="200" defaultRetryCount="3">
         <nodes>
             <node name="dev1" hostAddress="riak-test" pbcPort="8081" restPort="8091" poolSize="20" />
             <node name="dev2" hostAddress="riak-test" pbcPort="8082" restPort="8092" poolSize="20" />
@@ -57,19 +57,72 @@ You've told your application to expect a configuration section, now actually add
 
 Here you're creating a 3 node cluster listening on the `riak-test` machine, which is really just a simple cluster like you would create if you walked through the [Riak Fast Track][wiki_ft]. You could just as easily configure a single node, five node, or 60 node cluster. CorrugatedIron supplies a basic load balancer using round robin.
 
+It's important to note that the configuration shown above includes _all_ of the configuration options. A number of the attributes shown above have meaningful defaults:
+
+<table>
+  <tr>
+    <th>Attribute</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td>nodePollTime</td>
+    <td>5000</td>
+  </tr>
+  <tr>
+    <td>defaultRetryWaitTime</td>
+    <td>200</td>
+  </tr>
+  <tr>
+    <td>defaultRetryCount</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>pbcPort</td>
+    <td>8088</td>
+  </tr>
+  <tr>
+    <td>restScheme</td>
+    <td>http</td>
+  </tr>
+  <tr>
+    <td>restPort</td>
+    <td>8098</td>
+  </tr>
+  <tr>
+    <td>poolSize</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td>networkReadTimeout</td>
+    <td>2000</td>
+  </tr>
+  <tr>
+    <td>networkWriteTimeout</td>
+    <td>2000</td>
+  </tr>
+</table>
+
+This configuration information can easily be added to a `web.config` or `app.config` file. However, applications don't always have these configuration files so CorrugatedIron supports the loading of configuration from any configuration file, so long as it takes the same form as the XML listed above.
+
 ### Connecting CorrugatedIron to Riak ###
 
 At this point, you should have Riak configured to accept connections and the CorrugatedIron configuration should be set up and ready to go. The next step is to wire up CorrugatedIron. We made this pretty easy to do using whatever mechanism you'd like. This example shows how you would connect to Riak using plain old .NET. 
 
-    var clusterConfig = RiakClusterConfiguration.LoadFromConfig("riakConfig");
-    var cluster = new RiakCluster(clusterConfig, new RiakConnectionFactory());
+    var cluster = RiakCluster.FromConfig("riakConfig");
     var client = cluster.CreateClient();
+
+This code assumes that you're using `app.config` or `web.config`. If you're one of those people who isn't using either, but instead have your configuration stored somewhere else, you can use the overload provided that looks like this:
+
+    var cluster = RiakCluster.FromConfig("riakConfig", @"path\to\riak.config");
+    var client = cluster.CreateClient();
+
+The second parameter specifies the path to the file which takes the configuration. For those of you who are using tools like [FSI][], this overload avoids to need to create hacks or add configuration files elsewhere. All-round win!
 
 After you've connected, you can issue a `Client.Ping()` to make sure you're able to communicate with Riak. `Client.Ping()` returns a [`RiakResult`][riakresult] object. If the `Ping()` is successful `RiakResult.IsSuccess` will be true. At this point, you should get a valid response from Riak. If not, take a look through your configuration, run through the [Riak fast track][wiki_ft], and hit up either the Riak developer mailing list or else the #riak IRC channel on freenode.
 
-### Connecting CorrugatedIron to Riak - Using Unity ###
+### Connecting CorrugatedIron to Riak via IoC - Example Using Unity ###
 
-If you don't want to do things the old fashioned way, you can always use an IoC library to get connected to Riak through CorrugatedIron. Almost all of the [CorrugatedIron sample projects][ci_samples] make use of the Unity IoC library to handle automatically configuring communication with Riak. Just to take care of your curiosity, here's what this might look like. You'll need a Unity bootstrapper:
+If you don't want to do things the old fashioned way, you can always use an IoC library to get connected to Riak through CorrugatedIron. The [CorrugatedIron sample projects][ci_samples] demonstrate how to use a variety of IoC containers to wire up CorrugatedIron. Just to take care of your curiosity, here's what this might look like using [Unity][unityplex]:
 
     using CorrugatedIron;
     using CorrugatedIron.Comms;
@@ -98,20 +151,39 @@ If you don't want to do things the old fashioned way, you can always use an IoC 
         }
     }
 
-Inside the class that's instantiating the Riak connection, it's just as simple as:
+Note: the above sample shows every piece of the puzzle that makes up the wiring of a CorrugatedIron for the purposes of showing you what can be configured. In most cases, all that would be needed is the following:
+
+    using CorrugatedIron;
+    using CorrugatedIron.Comms;
+    using CorrugatedIron.Config;
+    using Microsoft.Practices.Unity;
+
+    namespace Sample.Unity
+    {
+        public static class UnityBootstrapper
+        {
+            public static IUnityContainer Bootstrap()
+            {
+                var cluster = RiakCluster.FromConfig("riakConfig");
+
+                var container = new UnityContainer();
+                container.RegisterInstance<IRiakCluster>(cluster, new ContainerControlledLifetimeManager());
+                container.RegisterType<IRiakClient>(new InjectionFactory(_ => cluster.CreateClient()));
+
+                return container;
+            }
+        }
+    }
+
+Bootstrapping only needs to happen once in each application and can be called easily like so:
 
     var container = UnityBootstrapper.Bootstrap();
+
+After which, creating a client is as easy as:
+
     var client = container.Resolve<IRiakClient>();
 
-You can find more examples of configuring CorrugatedIron in the [`CorrugatedIron.Samples`][ci_samples] project hosted on github.
-
-### But I'm not using a standard configuration! ###
-
-There are cases where a `web.config` or `app.config` files don't exist. This is fine! Just put your configuration in your own config file (eg. `corrugatediron.config`) and use the appropriate overload to load the configuration from that file:
-
-    var clusterConfig = RiakClusterConfiguration.LoadFromConfig("riakConfig", @"path\to\ci.config");
-
-Voila!
+You can find more examples of configuring CorrugatedIron in the [`CorrugatedIron.Samples`][ci_samples] project hosted on Github.
 
 ## Summing It Up ##
 
@@ -123,4 +195,4 @@ Connecting to Riak, especially with CorrugatedIron, should be quick and painless
 [wiki_ft]: http://wiki.basho.com/The-Riak-Fast-Track.html "Riak fast track"
 [unityplex]: http://unity.codeplex.com/ "Unity IoC Container"
 [riakresult]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/RiakResult.cs "RiakResult object"
-
+[FSI]: http://www.fsharphelp.com/Interactive.aspx "F# interactive"

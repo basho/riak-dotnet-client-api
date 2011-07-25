@@ -57,6 +57,7 @@ The authors are currently working the following features (though there are no da
 
 * Improved self-healing of connections and management of nodes.
 * Connection idling.
+* Functionality to aid in conflict resolution.
 * Support for Riak Search and Luwak.
 * LINQ expression parsing for Map/Reduce queries.
 * Incorporating feature requests and bug fixes.
