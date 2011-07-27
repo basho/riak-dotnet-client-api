@@ -21,7 +21,9 @@ These libraries will be included, in one way or another, with the CorrugatedIron
 
 The easiest way to install libarires in your project is to use [Nuget][]. CorrugatedIron has a [Nuget package][ci_nuget] package available which can be installed directly into your project by simply opening up the Package Manager Console and typing:
 
-    PM> Install-Package CorrugatedIron
+{% highlight bash %}
+PM> Install-Package CorrugatedIron
+{% endhighlight %}
 
 You can also use the Nuget GUI to search for and install the package.
 
@@ -39,8 +41,10 @@ All of the binary releases, along with the dependencies, are available directly 
 
 If you're doing this, you're a developer who probably doesn't need much hand-holding, so we'll keep this bit brief. Get yourself a [git][] client and type:
 
-    git clone git://github.com/DistributedNonsense/CorrugatedIron.git
-    git checkout master
+{% highlight bash %}
+git clone git://github.com/DistributedNonsense/CorrugatedIron.git
+git checkout master
+{% endhighlight %}
 
 This will pull down the source and update your working folder to the latest stable release version. Fire up your IDE (either Visual Studio or MonoDevelop), build, and you're ready to rock.
 

@@ -20,7 +20,9 @@ A Riak cluster has some arbitrary number of physical nodes. In order to protect 
 
 The RiakClient API has a simple `Get(string bucket, string key, unit rVal)` method that makes reading from Riak easy. Since a key is uniquely identified by a bucket/key combination, the only thing that you need to do to find a single key is look it up using that bucket/key combination.
 
-    var value = Client.Get("my_bucket", "my_key");
+{% highlight csharp %}
+var value = Client.Get("my_bucket", "my_key");
+{% endhighlight %}
 
 That's it, really. `Get()` returns an instance of `RiakResult`. A `RiakResult` object has a few properties and methods, but the important ones here are `IsSuccess`, `ErrorMessage`, `ResultCode`, and `Value`.
 
@@ -56,8 +58,10 @@ A successful read request occurs when `rVal` number of nodes respond with *the s
 
 Writing data is just as easy as reading it:
 
-    var object = new RiakObject("bucket", "key", { something = "value"; something_else = 3 });
-    Client.Put(object);
+{% highlight csharp %}
+var object = new RiakObject("bucket", "key", { something = "value"; something_else = 3 });
+Client.Put(object);
+{% endhighlight %}
 
 Actually, writing data is probably easier than reading it. When you read data, you have to figure out if there is actually there when the read is done. When you write data to Riak, that worry is gone (for the most part). If you've ever worked with a relational database you've probably written code to detect if an object is new or not and save it in one of several different ways. Saving data to Riak is a matter of pushing data at Riak. If there's already a key in a bucket, the key is overwritten. If there isn't a key in the bucket, a new record is inserted. Riak takes care of that mess for you.
 
