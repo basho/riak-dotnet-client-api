@@ -269,14 +269,20 @@ h5.active a:link            { color:#000; margin-bottom:0 !important;}
 
 /* Pre Code -------------------------------------------------------------------------------------------*/
 
-code, pre                   { background: url(/images/pre_bg.gif) ; font: normal 12px/20px Consolas, "Courier New", Courier, monospace; padding: 3px 5px; margin:10px 0 20px 0; border: 1px dotted #bbb;    color: #333;}
-code                        { padding: 3px 5px; background-image: none; }
 pre {
- white-space: pre-wrap;       /* css-3 */
- white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
- white-space: -pre-wrap;      /* Opera 4-6 */
- white-space: -o-pre-wrap;    /* Opera 7 */
- word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  overflow: auto;
+  border-top: 2px solid #DDD;
+  border-bottom: 2px solid #DDD;
+  background: #F8F8F8;
+  padding: 3px 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-family: Consolas, Courier;
+}
+
+code {
+  background: #F8F8F8;
+  font-family: Consolas, Courier;
 }
 
 /* Alert Boxes -------------------------------------------------------------------------------------------*/

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Getting Started
-heading: Basic Operations <strong>CorrugatedIron</strong>
+heading: Basic Operations in <strong>CorrugatedIron</strong>
 subheading: How to do basic operations with CorrugatedIron
 menuitem: Documentation
 ---
