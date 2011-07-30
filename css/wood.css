@@ -47,11 +47,11 @@ h1, h2, h3, h4, h5, h6          { font-family: Trebuchet MS, Helvetica, Garuda, 
 
 
 h1                              { font-size:44px; margin:0 0 15px 0;  letter-spacing:-1px;}
-h2                              { font-size:28px; margin:0 0 10px 0;  letter-spacing:-1px;}
-h3                              { font-size:21px; margin:0 0 10px 0; }
-h4                              { font-size:18px; margin:0 0 10px 0; }
-h5                              { font-size:15px; margin:0 0 5px 0; }
-h6                              { font-size:13px; margin:0 0 5px 0; }
+h2                              { font-size:28px; margin:15px 0 10px 0;  letter-spacing:-1px;}
+h3                              { font-size:21px; margin:15px 0 10px 0; }
+h4                              { font-size:18px; margin:15px 0 10px 0; }
+h5                              { font-size:15px; margin:8px 0 5px 0; }
+h6                              { font-size:13px; margin:8px 0 5px 0; }
 
 /* LAYOUT ------------------------------------------------------*/
 
@@ -62,8 +62,8 @@ html>body .pageright            { height: auto; }
 
 .pageleft                       { position: fixed; top: 0; left: 0;  text-align: right; }
 
-.pageleft                       { color: #fff; background:#4e4e4e url(/images/iron.jpg) top right; padding: 0; left: 0; width: 40%; text-align: right; overflow: hidden; }
-.pageright                      { color: #555; background:#ffffff; padding: 0; width:60%; left: 40%; text-align: left; overflow: hidden; }
+.pageleft                       { color: #fff; background:#4e4e4e url(/images/iron.jpg) top right; padding: 0; left: 0; width: 35%; text-align: right; overflow: hidden; }
+.pageright                      { color: #555; background:#ffffff; padding: 0; width:60%; left: 35%; text-align: left; overflow: hidden; }
 
 .content                        { margin:0px;     }
 
@@ -73,8 +73,8 @@ html>body .pageright            { height: auto; }
 
 /* Scroll------------------------------------------------------------*/
 
- .scroll-pane                   { width:550px;  padding-right:15px; padding-bottom:40px;}
- .noscroll                      { width:550px;  padding-right:15px; padding-bottom:40px;}
+ .scroll-pane                   { width:570px;  padding-right:15px; padding-bottom:40px;}
+ .noscroll                      { width:570px;  padding-right:15px; padding-bottom:40px;}
 
  
 .left .jScrollPaneTrack         { left: 0;right: auto;}

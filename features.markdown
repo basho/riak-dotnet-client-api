@@ -57,7 +57,9 @@ The authors are currently working the following features (though there are no da
 
 * Improved self-healing of connections and management of nodes.
 * Connection idling.
+* Discovery of cluster information and nodes.
 * Functionality to aid in conflict resolution.
+* Improved Key Filtering interface.
 * Support for Riak Search.
 * Support for Luwak.
 * Support for the new Secondary Indices.
@@ -66,6 +68,7 @@ The authors are currently working the following features (though there are no da
 
 Unplanned Features
 ------------------
+
 * **.NET 3.5 support** - after careful consideration we decided to not worry about
   adding support for .NET 3.5 applications. The main reason for this is that Riak is new
   to the .NET world and any applications that aim to talk to Raik will most likely be
@@ -74,3 +77,10 @@ Unplanned Features
   look into the options around adding support. At this stage, we don't think it's worth
   the effort when we could instead be adding new features to the client.
 
+Missing Features?
+-----------------
+
+Is there a Riak feature you know if which isn't listed here at all? Please [let us know][GetInTouch] or, better still, [get involved][GetInvolved]!
+
+[GetInvolved]: /contributing.html "Give us a hand"
+[GetInTouch]: https://github.com/DistributedNonsense/CorrugatedIron/issues "CorrugatedIron issues"

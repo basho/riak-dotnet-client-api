@@ -54,7 +54,6 @@ $(window).load(function() {
 <!--Cufon -->
 <script type="text/javascript" src="/js/cufon/cufon-yui.js"></script>
 <script type="text/javascript" src="/js/cufon/Titillium.js"></script>
-
 <script type="text/javascript" src="/js/custom.js"></script>
 <!--[if IE 6]>
 <script src="/js/DD_belatedPNG.js" type="text/javascript"></script>
@@ -77,7 +76,6 @@ $(window).load(function() {
 <body>
 <!-- .pageleft -->
 <div class="pageleft">
-
 	<!-- .content -->
 	<div class="content">	
     	<!-- .logo -->
@@ -85,9 +83,7 @@ $(window).load(function() {
 			<a href="#"><img src="/images/logo.png" alt="" /></a>
           </div>-->
         <!-- .logo -->
-		
 		<div class="clear"></div>
-		
 	    <!-- .main_menu -->
         <div class="main_menu">
 	    <!-- Menu Lists -->
@@ -101,62 +97,47 @@ $(window).load(function() {
 						<li><a href="/documentation/Basics.Connecting.html">Connecting</a></li>						
 						<li><a href="/documentation/Basics.Querying.html">Querying</a></li>						
 						<li><a href="/documentation/MapReduce.html">Map/Reduce</a></li>						
+						<li><a href="/documentation/MapReduce.KeyFilters.html">Key Filters</a></li>						
 					</ul>
 				</li>
               <li><a href="/story.html" class="parent no-child{% if page.menuitem == "Story" %} current{% endif %}">Story</a></li>
+              <li><a href="/contributing.html" class="parent no-child{% if page.menuitem == "Contributing" %} current{% endif %}">Hacking</a></li>
 			</ul>
 		</div>
         <!-- .main_menu -->
 		<div class="clear"></div>
-		
-			
 		<!-- .footer -->		
 		<div class="footer">
-			
 			<!-- .socialbar -->
 			<div class="socialbar">
               <span><a href="http://buffered.io/">OJ Reeves</a> and <a href="http://facility9.com/">Jeremiah Peschka</a></span>
 			</div>
 			<!-- .socialbar -->
-					
 			<div class="clear"></div>
-			
 			<!-- .copyright -->
-			<p>&copy; Copyright 2011. All Rights Reserved - <a href="#">corrugatediron.org</a></p>
-
+            <p>&copy; Copyright 2011. All Rights Reserved<br/><a href="#">corrugatediron.org</a></p>
 		</div>
 		<!-- .footer -->
 	</div>
 	<!-- .content -->
-
 </div>
 <!-- .pageleft -->	
-
 <!-- .pageright -->
 <div class="pageright">
-
 	<!-- #contentwrap -->
 	<div id="contentwrap">
-
 		<!-- .scrollpanel -->
 		<div class="scroll-pane" id="main-content">
-
             <h1>{{ page.heading }}</h1>
             <p class="simple">{{ page.subheading }}</p>
-
             <div class="divider"></div>
-
-
             {{ content }}
-			
 		</div>
 		<!-- .scrollpanel -->
 		<div class="clear"></div>
-
 	</div>
 	<!-- .contentwrap -->
 </div>
 <!-- .pageright -->
-
 </body>
 </html>
