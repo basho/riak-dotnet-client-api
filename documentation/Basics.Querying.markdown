@@ -10,7 +10,12 @@ There are three basic operations you can perform on data with Riak: get, put, an
 
 ## Referencing Data in Riak ##
 
-All data in Riak is referenced by a bucket/key pair. A bucket is a logical namespace for keys. A key must be unique within a bucket, but can be any format you'd like. 
+All data in Riak is referenced by a bucket/key pair. A bucket is a logical namespace for keys. A key must be unique within a bucket, but can be any format you'd like. Here are a few examples showing a user, a tweet, a stock price at a certain time, and a request in a log:
+
+    User\jeremiah.peschka@example.org
+    tweets\19373940183473481
+    stocks\MSFT:2011-07-29T180300Z
+    http_log\169.132.4.9~2011-07-26T053212Z~http://corrugatediron.org/images/logo.png
 
 ### A Diversion About n, r, and w ###
 
