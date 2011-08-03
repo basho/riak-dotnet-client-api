@@ -6,27 +6,27 @@ subheading: An introduction to Map/Reduce queries
 menuitem: Documentation
 ---
 
-Given the design philosophy behind Key/Value stores, querying the store via a mechanism other than the item's I.D. isn't the easiest of tasks. [Map/Reduce][MR] is one of the features of Riak which allows for various operations on data, including querying, filtering and aggregating information.
+Key/Value stores are designed for key-based lookups; ad hoc queries are typically not well supported. The [Map/Reduce][MR] model is a feature of Riak that makes it possible to perform diverse operations on data, including querying, filtering, and aggregating information.
 
-Full documentation of the Map/Reduce features available in Riak can be found on the [Riak Map/Reduce wiki page][MRWiki]. This article covers how to use these features in CorrugatedIron, but doesn't cover the features themeselves.
+Full documentation of the Map/Reduce features available in Riak can be found on the [Riak Map/Reduce wiki page][MRWiki]. This article covers how to use these features in CorrugatedIron, but doesn't cover the features themselves.
 
 ## Preparing the job ##
 
-CorrugatedIron provides a single class which is the first point of call when you're looking to do a Map/Reduce query. That class is (surprisingly) called [`RiakMapReduceQuery`][RiakMapReduceQuery.cs] and has a [fluent][]-style interface which (hopefully) makes it easy to work with.
+CorrugatedIron provides a simple class which is the first point of call for writing Map/Reduce queries. That class is named [`RiakMapReduceQuery`][RiakMapReduceQuery.cs] and has a [fluent][]-style interface which makes it easy to create rich ad hoc queires.
 
-Creating an instance is, as expected, as simple as:
+You can begin by simply creating a new `RiakMapReduceQuery` object:
 
 {% highlight csharp %}
 var query = new RiakMapReduceQuery();
 {% endhighlight %}
 
-After creating an instance, the first thing you'll want to do is specify the [inputs][MRInputs] for the Map/Reduce job. Inputs can be specified in three different ways...
+After creating an instance, you'll want to specify the [inputs][MRInputs] for the Map/Reduce job. Inputs can be specified in three different ways - as a Bucket, as a list of Bucket/Key pairs, as a Bucket/Key/Argument triple.
 
 ### Job Inputs ###
 
 * *Bucket Name* - A single string value that indicates the job should operate on all the keys within that bucket.
 * *Bucket/Key Pairs* - A list of [RiakBucketKeyInput][RiakBucketKeyInput.cs] instances which represent the Bucket/Key pairs which the job should operate on.
-* *Bucket/Key/Arg Trio* - A list of [RiakBucketKeyArgInput][RiakBucketKeyArgInput.cs] instances which represent the Bucket/Key pairs, along with a per-item argument, which the job should operate on.
+* *Bucket/Key/Arg Triple* - A list of [RiakBucketKeyArgInput][RiakBucketKeyArgInput.cs] instances which represent the Bucket/Key pairs, along with a per-item argument, which the job should operate on.
 
 Here is how you would specify a single bucket input:
 
@@ -48,7 +48,7 @@ var query = new RiakMapReduceQuery()
                 .Inputs(items);
 {% endhighlight %}
 
-To specify Bucket/Key/Arg trios, do the following:
+To specify Bucket/Key/Arg triples, do the following:
 
 {% highlight csharp %}
 var items = new []
@@ -61,17 +61,17 @@ var query = new RiakMapReduceQuery()
                 .Inputs(items);
 {% endhighlight %}
 
-Now that the inputs have been specified, you next need to choose the phases you wish to run.
+Now that the inputs have been specified, the next step is to write a series of Map and Reduce phases.
 
 ### Phase types and languages ###
 
-Riak has different types of [phases][MRPhases] which can be run during the course of a single Map/Reduce job, and each type of phase can be specified more than once if required. Each of those phase types is matched with one or more methods on the `RiakMapReduceQuery` class. Each one of these methods takes a single parameter, which is an `Action<T>`. The type `T` for that action will vary depending on the phase and the language that the phase is executed with. The instance of `T` that is passed has all the methods and properties which are available for that phase type and language type. The action that is passed in as a paramter should operate on the instance of `T` to configure that phase.
+Riak supports several types of [phases][MRPhases] to be run during a Map/Reduce job; each type of phase can be specified more than once. Each phase type is matched with one or more methods in the `RiakMapReduceQuery` class. Each one of these methods takes a single parameter - an `Action<T>`. The type `T` for each action will vary depending on the phase and language that the phase is executed with. The instance of `T` being passed has all the methods and properties  available for the phase and language type. The action passed in as a parameter operates on the instance of `T` to configure that phase.
 
-The phase methods are...
+The phase methods correspond to the languages that Riak supports for Map/Reduce operations: `MapJs()` and `MapErlang()`.
 
 #### MapJs() ####
 
-This indicates that the phase is a **Map** phase which uses Javascript as the language. The action parameter for this function call is of type [`RiakFluentActionPhaseJavascript`][RiakFluentActionPhaseJavascript.cs] and can also be configured in a fluent style. This class contains the following methods:
+The `MapJs` method creates a **Map** phase using Javascript to describe the mapping. The action parameter for this function call is of type [`RiakFluentActionPhaseJavascript`][RiakFluentActionPhaseJavascript.cs] and can also be configured in a fluent style. This class contains the following methods:
 
 * `Keep(bool)` - tells CorrugatedIron that the results of this phase should be kept or discarded.
 * `Argument<T>(T)` - specifies the argument to pass in to the phase for each bucket/key pair that is processed during the phase.
@@ -79,9 +79,9 @@ This indicates that the phase is a **Map** phase which uses Javascript as the la
 * `Source(string)` - specifies the full source, in Javascript, of the function to execute for this phase.
 * `BucketKey(string, string)` - specifies the Bucket name and Key name which indicates the location, inside Riak, of the object which contains the Javascript source function to use during this phase.
 
-`Name()`, `Source()` and `BucketKey()` are all mutually exclusive. Only one of these values should be set. If more than one of these is set then an exception will occur when the Map/Reduce query is executed.
+`Name()`, `Source()`, and `BucketKey()` are mutually exclusive. Only one of these values should be set. If more than one of these is set an exception will occur when the Map/Reduce query is executed.
 
-Both the `Keep()` and `Argument()` functions are safe and can be set at any time along with any of the other functions.
+Both the `Keep()` and `Argument()` can be set at any time along with any of the other functions. They are not mutually exclusive.
 
 Here are a few examples:
 
@@ -101,7 +101,7 @@ var query3 = new RiakMapReduceQuery()
 
 #### MapErlang() ####
 
-Just like `MapJs()`, `MapErlang()` indicates that this is a **Map** phase, but uses _Erlang_ instead of Javascript as the source language. The big difference with `MapErlang()` is that you can't write Erlang source code and pass that in as a paramter like you can with `MapJs()`.
+`MapErlang()` is a **Map** phase using _Erlang_ instead of Javascript as the source language. The big difference with `MapErlang()` is that you can't write Erlang source code and pass that in as a parameter like you can with `MapJs()`. To put it another way: there are no ad hoc Erlang functions in Riak Map/Reduce.
 
 The action parameter for this function call is of type [`RiakFluentActionPhaseErlang`][RiakFluentActionPhaseErlang.cs] and can be configured in a fluent style. This class contains the following methods:
 
@@ -119,7 +119,7 @@ var query = new RiakMapReduceQuery()
 
 #### ReduceJs() and ReduceErlang() ####
 
-Both `ReduceJs()` and `ReduceErlang()` have interfaces that match their **Map** counterparts, hence the functions that can be invoked are also the same.
+Both `ReduceJs()` and `ReduceErlang()` have interfaces that match their **Map** counterparts. The functions they expose are also the same.
 
 Here's an example:
 
@@ -132,11 +132,11 @@ var query = new RiakMapReduceQuery()
 
 #### Link() ####
 
-`Link()` provides the ability to get access to linked items via Riak's [link][RiakLinks] capability. This method expects an action which takes a [`RiakFluentLinkPhase`][RiakFluentLinkPhase.cs]. This class has the following methods:
+`Link()` gives callers the ability to access linked items via Riak's [link][RiakLinks] capability. `Link()` expects an action which takes a [`RiakFluentLinkPhase`][RiakFluentLinkPhase.cs]. Without digging too deep, links point to a record in another bucket and can be identified by a separate tag. This class has the following methods:
 
 * `Keep(bool)` - tells CorrugatedIron that the results of this phase should be kept or discarded.
-* `Bucket(string)` - specifies the name of the bucket to look for links in.
-* `Tag(string)` - specifies the name of the tag which the link must have.
+* `Bucket(string)` - the bucket to examine for links.
+* `Tag(string)` - if supplied, all links returned will have this tag.
 * `AllLinks()` - indicates that the user is interested in _all_ of the links that the object has.
 * `FromRiakLink(RiakLink)` - helper function which translates a [RiakLink][] instance into a link search definition.
 
@@ -166,7 +166,7 @@ The result set of the last query <del>would</del>may include PHP.
 
 #### Filter() ####
 
-When dealing with items during a Map/Reduce job, Riak provides the ability to filter out instances which don't match a set of predicates using [key filters][RiakKeyFilters].
+Riak provides the ability to rapidly filter keys by using a set of search predicates using [key filters][RiakKeyFilters]. 
 
 `Filter()` functions differently to how the other phases work due to the potential complexity of the filter. The function takes an instance of a Key Filter, of arbitrary complexity, and adds that to the set of key filters which will eventually be included in the query.
 
@@ -222,7 +222,7 @@ client.Async.StreamMapReduce(query, streamedResultHandler);
 
 Regardless of the approach that you take when executing the query, you'll get an object back which contains the results of the phases that were executed by the Map/Reduce job. If you chose to use a non-streaming API call, the result you get back will include the phase results **in the order that they were specified**.
 
-If you decided to use one of the streaming APIs, we aren't able to guarantee that the results will be in the order in which the phases were specified, hence is it up to the caller to make sure they are dealing with the right result phase when parsing the results.
+**Order cannot be guaranteed with streaming API calls.** It is up to the caller to guarantee that they are working with the correct result phase when parsing Map/Reduce results.
 
 Parsing the results is simple as enumerating them and extracting values:
 
@@ -248,7 +248,8 @@ if(result.IsSuccess)
 
 Congrats! You're now a Map/Reduce guru!
 
-Long term we'll looking to build a LINQ provider for this interface, but we're keeping this a lower priority than other features we deem as more important. If this is a deal-breaker, [get in touch][GetInTouch]!
+### Future Plans ###
+Long term we'll looking to build a LINQ provider for this interface, but this is a low priority feature. If this is a deal-breaker for you, [get in touch][GetInTouch]!
 
 [GetInTouch]: https://github.com/DistributedNonsense/CorrugatedIron/issues "CorrugatedIron issues"
 [KeyFilterDocs]: /documentation/MapReduce.KeyFilters.html
