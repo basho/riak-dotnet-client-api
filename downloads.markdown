@@ -13,16 +13,11 @@ CorrugatedIron has just reached its first ever release milestone and is proudly 
 
 * Grab the source directly from our Github repository ([development][] | [stable][released_source]).
 * Install the CorrugatedIron [Nuget package][nuget] directly into your project via Nuget.
-* Download a v0.1.2 source archive ([tar][] | [zip][]).
-
-v0.1.2 binaries are coming soon, but if you need them for v0.1.1, they're still right here:
-
-* Download the [v0.1.1 binaries][released_binaries].
-* Download a v0.1.1 source archive ([011tar][] | [011zip][]).
+* Download the [v0.1.2 binaries][released_binaries].
 
 If you're a user of Visual Studio the easiest option is to install the Nuget package. This can be done via the Nuget Package Management GUI, or from the Package Manager Console:
 
-    PM > Install-Package Corrugatediron
+    PM> Install-Package Corrugatediron
 
 Sample Applications
 -------------------
@@ -50,13 +45,10 @@ The sample applications can be found in our [samples repository][samples]. The s
 [development]: https://github.com/DistributedNonsense/CorrugatedIron/tree/develop "Development branch"
 [documentation]: http://corrugatediron.org/documentation/Basics.Installation.html
 [nuget]: http://www.nuget.org/List/Packages/CorrugatedIron "Nuget Package"
-[released_binaries]: https://github.com/DistributedNonsense/CorrugatedIron/downloads/CorrugatedIron-v0.1.1.zip "v0.1.1 binaries"
-[released_source]: https://github.com/DistributedNonsense/CorrugatedIron/tree/v0.1.2 "v0.1.1 source"
+[released_binaries]: https://github.com/DistributedNonsense/CorrugatedIron/downloads/CorrugatedIron-v0.1.2.zip "v0.1.2 binaries"
+[released_source]: https://github.com/DistributedNonsense/CorrugatedIron/tree/v0.1.2 "v0.1.2 source"
 [samples]: https://github.com/DistributedNonsense/CorrugatedIron.Samples "Samples"
 [session_state]: http://msdn.microsoft.com/en-us/library/aa478952.aspx "Session State Providers"
 [tar]: https://github.com/DistributedNonsense/CorrugatedIron/tarball/v0.1.2 "v0.1.2 source tarball"
 [zip]: https://github.com/DistributedNonsense/CorrugatedIron/zipball/v0.1.2 "v0.1.2 source zip"
 
-
-[011tar]: https://github.com/DistributedNonsense/CorrugatedIron/tarball/v0.1.1 "v0.1.1 source tarball"
-[011zip]: https://github.com/DistributedNonsense/CorrugatedIron/zipball/v0.1.1 "v0.1.1 source zip"
