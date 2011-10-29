@@ -1,0 +1,13 @@
+/* custom styles */
+div.posts ul li div.post-link {
+  display: inline-block;
+}
+div.posts ul li div.post-link small {
+  font-size: 6pt;
+  margin-left: 5px;
+}
+div.posts ul li div.post-date {
+  float: right;
+  display: inline;
+  text-align: right;
+}
