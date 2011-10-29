@@ -7,6 +7,7 @@ menuitem: Blog
 ---
 
 <div class="posts">
+<div style="text-align: right"><a href="/blog/atom.xml" title="ATOM Feed">ATOM Feed</a></div>
 <ul>
 {% for post in site.posts %}
 <li><div class="post-link"><a href="{{ post.url }}">"{{ post.title }}"</a><small> by {{ post.author }}</small></div>
