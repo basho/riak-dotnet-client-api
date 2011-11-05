@@ -1,0 +1,38 @@
+# CorrugatedIron 0.2.1 Released
+
+I'm a bit late on the release announcement, but we pushed CorrugatedIron v0.2.1 late on Thursday, November 3rd. This release contains a few minor improvements and one much wanted feature.
+
+## TCP_NODELAY
+
+We've set `TCP_NODELAY` on the sockets communicating with Riak. This forces CorrugatedIron into behavior where it won't buffer many small messages (very common when using Protocol Buffers). Instead, CorrugatedIron is going to send data as quickly as it can to Riak. 
+
+You can read more about [Basho's recommendations][br] and a deeper explanation of [Nagle's algorithm][na]
+
+## GetIndex
+
+To make life easier for developers we've added a GetIndex method. Developers who want to use this can create a `RiakIndexInput` object and pass that to the `GetIndex` method. Under the covers, `GetIndex` creates a MapReduce job to query the secondary index and then returns a `RiakBucketKeyInput` object, perfect for feeding to additional MapReduce phases.
+
+    var rbki = new RiakIntIndexRangeInput("people", "age", 18, 35);
+    var targetMarketKeys = client.GetIndex(rbki);
+    
+    var mr = new RiakMapReduceQuery { ContentType = RiakConstants.ContentTypes.ApplicationJson };
+    
+    mr.Inputs(targetMarketyKeys);
+    
+We think that this will make it easier for developers to work with secondary indexes in Riak.
+
+## Configuration
+
+After a bit of work and time on OJ's part (everybody thank OJ), we've pushed out fluent configuration code. The relevant code is in [`RiakClusterConfiguration`][rcc], [`RiakNodeConfiguration`][rnn], and [`RiakExternalLoadBalancerConfiguration`][rxlbc].
+
+## In Summation
+
+If you find a problem, report it on the [Issues][issues] page. 
+If you want to add a feature, check out the [Issues][issues] page and see what we're working on. We may already be in process. Or it might not even be on our radar. Create a new feature request and we'll clue you in on what's going on.
+
+[br]: http://wiki.basho.com/Client-Implementation-Guide.html#Nagle's-Algorithm
+[na]: http://en.wikipedia.org/wiki/Nagle%27s_algorithm
+[rcc]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Config/Fluent/RiakClusterConfiguration.cs
+[rnn]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Config/Fluent/RiakNodeConfiguration.cs
+[rxlbc]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Config/Fluent/RiakExternalLoadBalancerConfiguration.cs
+[issues]: https://github.com/DistributedNonsense/CorrugatedIron
