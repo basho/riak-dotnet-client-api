@@ -1,4 +1,12 @@
-# CorrugatedIron 0.2.1 Released
+---
+layout: blog
+title: CorrugatedIron.org 0.2.1 Released
+heading: <strong>CorrugatedIron</strong> 0.2.1 Released
+subheading: Fluent configuration, TCP_NODELAY and GetIndex
+menuitem: Blog
+description: A small release with few key changes.
+author: JP
+---
 
 I'm a bit late on the release announcement, but we pushed CorrugatedIron v0.2.1 late on Thursday, November 3rd. This release contains a few minor improvements and one much wanted feature.
 
