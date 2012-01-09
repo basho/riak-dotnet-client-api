@@ -19,7 +19,7 @@ These libraries will be included, in one way or another, with the CorrugatedIron
 
 ## Getting via Nuget ##
 
-The easiest way to install libarires in your project is to use [Nuget][]. CorrugatedIron has a [Nuget package][ci_nuget] package available which can be installed directly into your project by simply opening up the Package Manager Console and typing:
+The easiest way to install libraries in your project is to use [Nuget][]. CorrugatedIron has a [Nuget package][ci_nuget] package available which can be installed directly into your project by simply opening up the Package Manager Console and typing:
 
 {% highlight bash %}
 PM> Install-Package CorrugatedIron
