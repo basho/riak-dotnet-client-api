@@ -38,7 +38,13 @@ What are you interested in?
 * [Documentation][documentation]
 * [The story behind CorrugatedIron][story]
 
+Thanks
+------
 
+YourKit is kindly supporting CorrugatedIron and other open source projects with its full-featured .NET Profiler.  YourKit, LLC is the creator of innovative and intelligent tools for profiling .NET and Java applications. Take a look at YourKit's leading software products: [YourKit .NET Profiler][YourKitNet] and [YourKit Java Profiler][YourKitJava]. Thanks YourKit!
+
+[YourKitNet]: http://www.yourkit.com/.net/profiler/index.jsp "YourKit .NET Profiler"
+[YourKitJava]: http://www.yourkit.com/java/profiler/index.jsp "YourKit Java Profiler"
 [downloads]: /downloads.html "CorrugatedIron Downloads"
 [story]: /story.html "The CorrugatedIron Story"
 [oj]: http://buffered.io/ "OJ's site"
