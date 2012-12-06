@@ -95,7 +95,7 @@ To invoke a query on a `binary` index, simply perform the same function but pass
 
 There is one important difference to not when dealing with the PBC interface compared to the Map/Reduce interface and that is that the PBC interface will only return a list of keys which represent the objects matched by the index query. To get the body of the objects that match a second query will need to be run. This could be a Map/Reduce query or simple `Get()`.
 
-The [IRiakClient][] interface has a function called `IndexGet` which has 4 overloads. Each overload provides a combinations of `int` or `binary` indexes with `match` or `range` semantics. For example, to query Riak and retrieve a collection of `string` values representing keys that match an object which has a `binary` property called `age` with a value of `"34"`, the following call can be made:
+The [RiakClient][] has a function called `IndexGet` which has 4 overloads. Each overload provides a combinations of `int` or `binary` indexes with `match` or `range` semantics. For example, to query Riak and retrieve a collection of `string` values representing keys that match an object which has a `binary` property called `age` with a value of `"34"`, the following call can be made:
 
 {% highlight csharp %}
 var result = Client.IndexGet("person", "age", "34");
@@ -130,6 +130,7 @@ Client.Put(me);
 
 Congratulations, you've mastered 2i handling in **CorrugatedIron**.
 
+  [RiakClient]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/RiakClient.cs
   [eleveldb]: https://github.com/basho/eleveldb
   [CI.MapReduce]: /documentation/MapReduce.html
   [PBC]: http://docs.basho.com/riak/latest/references/apis/protocol-buffers/
