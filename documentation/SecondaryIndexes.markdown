@@ -6,7 +6,7 @@ subheading: An introduction to Secondary Indexes
 menuitem: Documentation
 ---
 
-Riak has built-in support for [Secondary Indexes][2i] (2i). Here's a snippet from the documentation:
+Riak has built-in support for [Secondary Indexes][2i] (2i) which gives the ability to find values based on non-key values. Here's a snippet from the 2i documentation on Basho's website:
 
 > Secondary Indexing (2i) in Riak gives developers the ability,
 > at write time, to tag an object stored in Riak with one or more
