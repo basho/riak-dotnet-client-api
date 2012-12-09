@@ -67,7 +67,26 @@ if (!setResult.IsSuccess)
 
 You'd assume that _r_ and _w_ need to be set to a numeric value. That's only partially true. _r_ and _w_ can also be set to a string so long as that string is either `"all"`, `"quorum"`, or `"one"`. The default is `"quorum"`.
 
-There are several other bucket properties that we haven't discussed `DwVal` and `RwVal`
+There are several other bucket properties that we haven't discussed `DwVal` and `RwVal`. 
+
+**`DWVal`** is the durable write parameter. A durable write is a write that has been acknowledged as being fully written to disk - as opposed to in the operating system's file cache. Users who are particularly concerned about data durability will want to set the `DwVal`. By default, Riak does not wait for a durable write to be committed and, instead, trusts the operating system and the resilience provided by having multiple copies of the data on multiple servers.
+
+**`RwVal`** is used for deletes. This is the number of replicas that must return before a delete is considered complete. 
+
+## Data Retrieval Properties
+
+The `RiakGetOptions` class provides a convenient way to create a set of querying options. Through `RiakGetOptions` it's possible to modify the behavior of the following properties:
+
+* R
+* PR
+* Basic Quorum
+* NotFound OK
+
+In addition, the `RiakGetOptions` allow you to specify different behavior for a single Get request.
+
+* **`Head`** - The `Head` option is particularly useful if you only need to inspect the metadata of a large object. When `Head` is `true`, Riak will only return object metadata.
+* **`DeletedVclock`** - Returns an object's delete tombstone vclock, if applicable.
+* **`IfModified`** - The `IfModified` option allows a user to specify a single vector clock as an array of bytes. If the value stored in Riak has a different vector clock, an object will be returned. This can be useful in polling applications where you don't want to ship a large object back to the client for comparison.
 
 
 [ci_basic]: http://corrugatediron.org/documentation/Basics.Querying.html
