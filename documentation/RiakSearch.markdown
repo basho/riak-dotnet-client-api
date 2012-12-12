@@ -64,7 +64,7 @@ var search = new RiakFluentSearch("people", "name")
     .Build();
 {% endhighlight %}
 
-TODO: Handle proximity queries (readjust implementation to match the meaning).
+### Boost ###
 
 If you want to boost a particular part of the query term, you can do it using the `Boost(n)` function like so:
 
@@ -77,6 +77,16 @@ var search = new RiakFluentSearch("people", "name")
 {% endhighlight %}
 
 The above query boosts `Bob` by `10` and `Alice` by `5`.
+
+### Proximity ###
+
+If you're interested in returning documents which have a set of words that are within a certain proximity of each other, you can use the `Proximity` query:
+
+{% highlight csharp %}
+var search = new RiakFluentSearch("people", "name")
+    .Proximity(10, "these", "words", "should", "be", "close")
+    .Build();
+{% endhighlight %}
 
 ### Ranges ###
 
