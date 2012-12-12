@@ -73,7 +73,7 @@ There are several other bucket properties that we haven't discussed `DwVal` and 
 
 **`RwVal`** is used for deletes. This is the number of replicas that must return before a delete is considered complete. 
 
-## Data Retrieval Properties
+## Data Retrieval Properties - RiakGetOptions
 
 The `RiakGetOptions` class provides a convenient way to create a set of querying options. Through `RiakGetOptions` it's possible to modify the behavior of the following properties:
 
@@ -87,6 +87,30 @@ In addition, the `RiakGetOptions` allow you to specify different behavior for a 
 * **`Head`** - The `Head` option is particularly useful if you only need to inspect the metadata of a large object. When `Head` is `true`, Riak will only return object metadata.
 * **`DeletedVclock`** - Returns an object's delete tombstone vclock, if applicable.
 * **`IfModified`** - The `IfModified` option allows a user to specify a single vector clock as an array of bytes. If the value stored in Riak has a different vector clock, an object will be returned. This can be useful in polling applications where you don't want to ship a large object back to the client for comparison.
+
+## Data Storage Properties - RiakPutOptions
+
+The `RiakPutOptions` class makes it easy and fun to control how data is persisted in Riak. 
+
+Although it isn't documented here, users should always supply a vector clock when updating an object. This will ensure that siblings are not created. For developers, this means that a get should always precede a write, even if the get only uses the `head` parameter  Of course, leaving the vector clock blank is a good way to deliberately create a sibling. 
+
+Through `RiakPutOptions` it is possible to modify the behavior of the following properties:
+
+* W 
+* Dw
+* Pw 
+* ReturnBody 
+* ReturnHead 
+* IfNotModified 
+* IfNoneMatch 
+
+* **`W`** - How many replicas must successfully acknowledge the write request before the request is deemed a success. A higher `w` equates to strong consistency, but slower performance. 
+* **`Dw`** - The `dw` parameter is the paranoid version of `w`. `dw` represents the number of replicas that must acknowledge that data was successfully written to durable storage (as opposed to file system cache).
+* **`Pw`** - The number of primary nodes that must acknowledge a write as being successful. Both `w` and `dw` allow hinted hand off to occur and still mark a write as successful. By setting `pw`, the configured number primary nodes for a particular key must be online and accepting writes in order for the write to be successful.
+* **`ReturnBody`** - If `ReturnBody` is set to true, Riak will return the contents of the stored object. This defaults to `false`.
+* **`ReturnHead`** - When `ReturnHead` is set to true, the value for the object will be blank, but all header information will be returned to the client. This can be useful when you want to hold the vector clock of an object in memory without having to query Riak directly after saving data.
+* **`IfNotModified`** - Setting `IfNotModified` to `true` ensures that Riak will only update the data if the vector clock on disk matches the vector clock on the supplied object. This can help prevent siblings and other strange data anomalies.
+* **`IfNoneMatch`** - The object will be stored if no other bucket/key combination exists.
 
 
 [ci_basic]: http://corrugatediron.org/documentation/Basics.Querying.html
