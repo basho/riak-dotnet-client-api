@@ -18,16 +18,16 @@ Getting connected to Riak is pretty straightforward. There are three steps to ge
 
 ### Verifying that Riak is Listening ###
 
-First you need to know which port number Riak is running on.
+First you need to know Riak's port number.
 
 * If Riak was installed via a package (such as a Debian `.deb` package or Homebrew) or from source and built using `make rel` then by default the port number that Riak listens on is `8098`.
-* If Riak was installed from source and built using `make devrel` then this means that there is a 3-node cluster ready and listening on ports `8091`, `8092` and `8093`.
+* If Riak was installed from source and built using `make devrel` you can assume that there is a 3-node cluster ready and listening on ports `8091`, `8092` and `8093`.
 
-Fire up a browser and point it to your Riak machine with a URL like `http://riak-test:8098/riak/status`. You can connect to any node in your Riak cluster (you could even have it behind some kind of load balancing proxy). I have three nodes in my development cluster and `riak-test` is an alias for the localhost (I do .NET development in a Windows 7 VM but run Riak in OS X). Verify the port number with your admin if you can't get connected. If the port number is right, and you can't connect then we need to move on to verifying if Riak is listening. If you get connected at this point, then move on to the next step.
+Fire up a browser and point it to your Riak machine with a URL like `http://127.0.0.1:8098/riak/status`. You can connect to any node in your Riak cluster (you could even have it behind some kind of load balancing proxy). Verify the port number with your admin if you can't get connected. If the port number is right and you can't connect then we need to move on to verifying if Riak is listening. If you get connected at this point, then move on to the next step.
 
 If you can't get connected, the best bet is to make sure Riak is listening on the right IP and port. Open up the `app.config` file and look in the `riak_core` and `riak_kv` sections. Make sure the `http`, `https`, and/or `pb_ip`/`pb_port` configuration values list the IP and port combinations that you're expecting. If you're a developer with a development cluster running on a different machine to the one you intend to connect from using CorrugatedIron then it is important that IP addresses for `pb_ip`, `http` and `https` (if used) are not set to `127.0.0.1` as this is the loopback address. Binding to this address will prevent any connections from applications not on the local machine from connecting to Riak. If in doubt, the easiest way to solve the IP binding problem is to change all instances of `127.0.0.1` to `0.0.0.0`, which will tell Riak to bind to all interfaces on the machine.
 
-CorrugatedIron makes use of both the HTTP and PBC interfaces, so it is important that both of these are configured correctly. Where possible, CorrugatedIron uses the Protocol Buffers API instead of the HTTP API to improve application throughput and performance, but it will degrade to the HTTP API in cases where the required feature set is not available via the Protocol Buffers interface.
+CorrugatedIron makes use of both the HTTP and PBC interfaces, so it is important that both of these are configured correctly. Where possible, CorrugatedIron uses the Protocol Buffers API instead of the HTTP API to improve application throughput and performance, but it will fall back to the HTTP API in cases where the required feature set is not available via the Protocol Buffers interface.
 
 When all else fails, [check the wiki][wiki_install].
 
@@ -59,9 +59,9 @@ You've told your application to expect a configuration section, now actually add
 </riakConfig>
 {% endhighlight %}
 
-Here you're creating a 3 node cluster listening on the `riak-test` machine, which is really just a simple cluster like you would create if you walked through the [Riak Fast Track][wiki_ft]. You could just as easily configure a single node, five node, or 60 node cluster. CorrugatedIron supplies a basic load balancer using round robin.
+Here you're creating a 3 node cluster listening on the `riak-test` machine, which is really just a simple cluster like you would create if you walked through the [Riak Fast Track][wiki_ft]. You could just as easily configure a single node, five node, or 60 node cluster. CorrugatedIron ships with a basic round robin load balancer.
 
-It's important to note that the configuration shown above includes _all_ of the configuration options. A number of the attributes shown above have meaningful defaults:
+It's important to note that the configuration shown above does not include all possible  configuration options - the remaining options have sane defaults.
 
 <table>
   <tr>
@@ -207,8 +207,8 @@ Connecting to Riak, especially with CorrugatedIron, should be quick and painless
 
 [ci]: http://github.com/DistributedNonsense/CorrugatedIron "CorrugatedIron at Github"
 [ci_samples]: http://github.com/DistributedNonsense/CorrugatedIron.Samples "CorrugatedIron sample applications at Github"
-[wiki_install]: http://wiki.basho.com/Installation-and-Setup.html "Riak installation and setup"
-[wiki_ft]: http://wiki.basho.com/The-Riak-Fast-Track.html "Riak fast track"
+[wiki_install]: http://docs.basho.com/riak/latest/tutorials/installation/ "Riak installation and setup"
+[wiki_ft]: http://docs.basho.com/riak/latest/tutorials/fast-track/ "Riak fast track"
 [unityplex]: http://unity.codeplex.com/ "Unity IoC Container"
 [riakresult]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/RiakResult.cs "RiakResult object"
 [FSI]: http://www.fsharphelp.com/Interactive.aspx "F# interactive"
