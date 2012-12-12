@@ -88,6 +88,8 @@ var search = new RiakFluentSearch("people", "name")
     .Build();
 {% endhighlight %}
 
+The Proximity function can take any number of words.
+
 ### Ranges ###
 
 Sometimes you will need to search for a range of values. If, for example, you're looking for a person with an age between 30 and 35 inclusive, you can do the following:
@@ -196,7 +198,36 @@ After reading the above section you now have a search ready to execute. There ar
 
 ### Querying via Map/Reduce ###
 
-TODO: double check the map/reduce interface to make sure it's doing what we expect
+Start by creating your search query:
+
+{% highlight csharp %}
+var search = new RiakFluentSearch("people", "name")
+    .Search(Token.StartsWith("Jo"))
+    .Build();
+{% endhighlight %}
+
+You would then add this to a new map/reduce query:
+
+{% highlight csharp %}
+var mr = new RiakMapReduceQuery()
+    .Inputs(new RiakBucketSearchInput(search));
+{% endhighlight %}
+
+You can add phases as per any other map/reduce query. At this point you can invoke the map/reduce job on the `RiakClient`:
+
+{% highlight csharp %}
+var result = Client.MapReduce(req);
+if (result.IsSuccess) ...;
+{% endhighlight %}
+
+Or you can use the streaming API:
+
+{% highlight csharp %}
+var result = Client.StreamMapMapReduce(req);
+if (result.IsSuccess) ...;
+{% endhighlight %}
+
+Using this interface gives you the added benefit of being able to do other phases after searching prior to returning the data back to the client.
 
 ### Querying via PBC ###
 
