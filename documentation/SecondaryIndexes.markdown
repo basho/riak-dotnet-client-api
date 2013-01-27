@@ -24,29 +24,69 @@ As you can see there is a requirement that your Riak cluster be configured to us
 
 **CorrugatedIron** has full support for creating, querying and removing secondary indexes in Riak. Behind the scenes the [PBC][] interface is used to perform all of these functions.
 
-The [RiakObject][] class is where 2i operations are managed. It maintains a property called `Indexes` which is a dictionary of `string` (index name) to `string` (index value). This property contains both `binary` and `integer` indexes (for more information on index types refer to the [Basho wiki][2i]. While this is interesting to developers, this is often used just for information purposes and nothing more. There are other methods which should be used to interact with 2i.
+The [RiakObject][] class is where 2i operations are managed and hence this is the point of call when you are looking to do something with 2i.
 
 ### Creating an Index ###
 
-Given that Riak supports two types of indexes, `binary` and `integer`, **CorrugatedIron** provides two overloaded interface functions for dealing adding indexes. The overloaded functions use the types that are passed in to determine which type of index to create.
+Given that Riak supports two types of indexes, `binary` and `integer`, **CorrugatedIron** provides two interface functions for dealing with indexes, they are `BinIndex()` and `IntIndex()`. They both operate in a similar way and are quite easy to use.
 
-Here is sample code which shows how to create an object with one `integer` and one `binary` index, which is then stored in Riak.
+Here is some sample code that shows how to add indexes of various types:
 
 {% highlight csharp %}
 // Create an object to store in Riak
 var me = new RiakObject("person", "oj", "{ age: 34, first_name: \"Oliver\" }");
 
-// add an integer index by using the AddIndex() function and passing
-// in an integer value
-me.AddIndex("age", 34);
+// set an integer index of a given name
+me.IntIndex("age").Set(34);
 
-// add a binary index by using the AddIndex() function and passing
-// in a string value
-me.AddIndex("first_name", "Oliver");
+// set a binary index the same way
+me.BinIndex("nationality").Set("Australian");
+
+// got more than one value? You can add another without deleting existing ones
+me.BinIndex("nationality").Add("English");
+
+// Set more than one value at once
+me.BinIndex("nationality").Set("Australian", "English");
+
+// Add more than one value at once
+me.BinIndex("nationality").Set("Swahili", "Danish");
+
+// Overwrite an existing set of values
+me.BinIndex("names").Add("Doris"); // that's not right!
+me.BinIndex("names").Set("OJ", "Oliver", "Derpus"); // overwrites existing
+
+// remove a vale
+me.BinIndex("names").Remove("Derpus");
+
+// remove all values
+me.BinIndex("names").Clear();
+
+// remove the index itself off the object.
+me.BinIndex("names").Delete();
+
+// use IEnumerables of stuff instead
+var names = new List<string> { ... };
+me.BinIndex("names").Set(names);
+
+// work fluently
+me.IntIndex("fav_nums")
+    .Add(10)
+    .Add(40)
+    .Add(50, 30, 20)
+    .Remove(40)
+    .Add(listOfNumbers);
 
 // store in Riak
 Client.Put(me);
+
+// Look at any existing values in an index:
+foreach(var value in me.IntIndex("fav_nums").Values)
+{
+    // do something with value
+}
 {% endhighlight %}
+
+When adding values to an index, all duplicates are removed prior to sending to Riak. Even though Riak has built-in functionality that removes duplicate secondary index values we remove them on the client so that we don't send unnecessary traffic across the wire.
 
 ### Querying an Index ###
 
