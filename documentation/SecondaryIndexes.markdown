@@ -49,7 +49,7 @@ me.BinIndex("nationality").Add("English");
 me.BinIndex("nationality").Set("Australian", "English");
 
 // Add more than one value at once
-me.BinIndex("nationality").Set("Swahili", "Danish");
+me.BinIndex("nationality").Add("Swahili", "Danish");
 
 // Overwrite an existing set of values
 me.BinIndex("names").Add("Doris"); // that's not right!
