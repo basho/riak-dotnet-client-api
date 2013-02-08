@@ -6,20 +6,6 @@ subheading: A feature-rich .NET client for the Riak KV store
 menuitem: Home
 ---
 
-<!-- .sliderwrap -->
-<!-- TODO: get some imagery and shove them in here
-<div class="sliderwrap">
-    <div id="slider" class="nivoSlider">
-        <a href="#"><img src="images/slide1.jpg" width="520" alt="" /></a>
-        <a href="#"><img src="images/slide2.jpg" width="520" alt="" /></a>
-        <a href="#"><img src="images/slide1.jpg" width="520" alt="" /></a>
-        <a href="#"><img src="images/slide2.jpg" width="520" alt="" /></a>	
-    </div>
-</div>-->
-<!-- .sliderwrap -->
-
-<!--<div class="divider"></div>-->
-
 Welcome!
 --------
 
@@ -37,6 +23,7 @@ What are you interested in?
 * [Current Version and Downloads][downloads]
 * [Documentation][documentation]
 * [The story behind CorrugatedIron][story]
+* [I need help!][help]
 
 Thanks
 ------
@@ -54,3 +41,4 @@ YourKit is kindly supporting CorrugatedIron and other open source projects with 
 [email]: mailto:distributednonsense@buffered.io "Contact the guys"
 [documentation]: /documentation/Basics.Installation.html "CorrugatedIron Documentation"
 [Basho]: http://www.basho.com/ "Basho Technologies"
+[help]: /help.html

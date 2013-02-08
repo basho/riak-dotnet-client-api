@@ -9,7 +9,7 @@ menuitem: Features
 Current Features
 ----------------
 
-The current released of CorrugatedIron, v0.1.0, has the following features:
+The current release of CorrugatedIron has the following features:
 
 * Riak cluster support:
     * One or more nodes in the cluster.
@@ -32,6 +32,8 @@ The current released of CorrugatedIron, v0.1.0, has the following features:
 * Link walking. &nbsp;&nbsp;&nbsp;&hearts;
 * Delete buckets. &nbsp;&nbsp;&nbsp;&hearts;
 * Set/Get bucket properties. &nbsp;&nbsp;&nbsp;&hearts;
+* Full Secondary Index support.
+* Fluent Riak Search interface.
 * Batch operations on a single connection.
     * Each time a Client function is called resulting in communication with the Riak
       cluster, a connection is pulled from a pool on a given node. In most use-cases this
@@ -39,13 +41,14 @@ The current released of CorrugatedIron, v0.1.0, has the following features:
       however, cases where many operations will happen at once. Rather than forcing the
       user to make multiple calls to the client, resulting in multiple connection
       acquisitions behind the scenes, the user can use the Batch interface to make many
-      calls on a single connection. This also reduces the overhead of setting the client
-      ID on each call as well.
+      calls on a single connection.
     * Because a batch operation reuses a single connection only a subset of the client
       API is available for batch actions. The functions that are excluded are the
       asynchronous functions.
-* Graceful degrade to HTTP/REST API when the request isn't supported via Protocol Buffers.
+* Graceful degradation to HTTP/REST API when the request isn't supported via Protocol Buffers.
 * Works with .NET 4.0 on Windows, and Mono on Linux and OSX.
+
+As of CorrugatedIron v1.1 full support of Riak v1.2 is enabled.
 
 <small>*&hearts;: denotes availability of both blocking and asynchronous APIs*<br/>
 *&laquo;: denotes availability of both streaming and non-streaming APIs*</small>
@@ -58,13 +61,8 @@ The authors are currently working the following features (though there are no da
 * Improved self-healing of connections and management of nodes.
 * Connection idling.
 * Discovery of cluster information and nodes.
-* Functionality to aid in conflict resolution.
-* Improved Key Filtering interface.
-* Support for Riak Search.
-* Support for Luwak.
-* Support for the new Secondary Indices.
-* LINQ expression parsing for Map/Reduce queries.
 * Incorporating feature requests and bug fixes.
+* Playing catch-up with Riak's advances.
 
 Unplanned Features
 ------------------
