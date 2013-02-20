@@ -22,6 +22,12 @@ Both Jeremiah and OJ are subscribed to the mailing list and are constantly watch
 
 So make sure you post to the [mailing list][ml], it really is the best place to get help.
 
+Need Support?
+-------------
+
+Jeremiah and OJ are availble should you require paid support. The best thing to do this case is to [email us directly][email] to discuss your needs and to figure out a plan of attack. We look forward to hearing from you!
+
   [ml]: http://lists.basho.com/mailman/listinfo/riak-users_lists.basho.com "Riak mailing list"
   [Jeremiah]: https://twitter.com/peschkaj
   [OJ]: https://twitter.com/TheColonial
+  [email]: mailto:distributednonsense@buffered.io

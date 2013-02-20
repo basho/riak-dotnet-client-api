@@ -9,7 +9,7 @@ menuitem: Downloads
 Current Version
 ---------------
 
-CorrugatedIron is still in very active development. We have just proudly released [v1.1.0][released_source]. If you're keen to get your hands on it you have the following options:
+CorrugatedIron is still in very active development. We have just proudly released [v1.2.0][released_source]. If you're keen to get your hands on it you have the following options:
 
 * Grab the source directly from our Github repository ([development][] | [stable][released_source]).
 * Download the source as an archive ([tar][] | [zip][]).
@@ -45,9 +45,9 @@ The sample applications can be found in our [samples repository][samples]. The s
   [development]: https://github.com/DistributedNonsense/CorrugatedIron/tree/develop "Development branch"
   [documentation]: http://corrugatediron.org/documentation/Basics.Installation.html
   [nuget]: http://www.nuget.org/List/Packages/CorrugatedIron "Nuget Package"
-  [released_source]: https://github.com/DistributedNonsense/CorrugatedIron/tree/v1.1.0 "v1.1.0 source"
+  [released_source]: https://github.com/DistributedNonsense/CorrugatedIron/tree/v1.2.0 "v1.2.0 source"
   [samples]: https://github.com/DistributedNonsense/CorrugatedIron.Samples "Samples"
   [session_state]: http://msdn.microsoft.com/en-us/library/aa478952.aspx "Session State Providers"
-  [tar]: https://github.com/DistributedNonsense/CorrugatedIron/tarball/v1.1.0 "v1.1.0 source tarball"
-  [zip]: https://github.com/DistributedNonsense/CorrugatedIron/zipball/v1.1.0 "v1.1.0 source zip"
+  [tar]: https://github.com/DistributedNonsense/CorrugatedIron/tarball/v1.2.0 "v1.2.0 source tarball"
+  [zip]: https://github.com/DistributedNonsense/CorrugatedIron/zipball/v1.2.0 "v1.2.0 source zip"
 
