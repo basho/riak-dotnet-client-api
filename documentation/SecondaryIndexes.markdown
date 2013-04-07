@@ -26,6 +26,8 @@ As you can see there is a requirement that your Riak cluster be configured to us
 
 The [RiakObject][] class is where 2i operations are managed and hence this is the point of call when you are looking to do something with 2i.
 
+It is worth noting that as of **CorrugatedIron v1.3.0** the `IntIndex()` functionality was changed from `int` to `BigInteger` because Riak actually uses the bigger integers behind the scenes.
+
 ### Creating an Index ###
 
 Given that Riak supports two types of indexes, `binary` and `integer`, **CorrugatedIron** provides two interface functions for dealing with indexes, they are `BinIndex()` and `IntIndex()`. They both operate in a similar way and are quite easy to use.

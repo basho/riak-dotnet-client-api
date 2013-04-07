@@ -108,6 +108,10 @@ It's important to note that the configuration shown above does not include all p
 
 This configuration information can easily be added to a `web.config` or `app.config` file. However, applications don't always have these configuration files so CorrugatedIron supports the loading of configuration from any configuration file, so long as it takes the same form as the XML listed above.
 
+#### On-the-fly Connections ####
+
+As of v1.3.0, **CorrugatedIron** supports _on-the-fly_ connections as well as pooling. To enable this feature, set the `poolSize` attribute of a given node to `0`.
+
 ### Connecting CorrugatedIron to Riak ###
 
 At this point, you should have Riak configured to accept connections and the CorrugatedIron configuration should be set up and ready to go. The next step is to wire up CorrugatedIron. We made this pretty easy to do using whatever mechanism you'd like. This example shows how you would connect to Riak using plain old .NET. 
