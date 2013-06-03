@@ -32,33 +32,31 @@ Here is how you would specify a single bucket input:
 
 {% highlight csharp %}
 var query = new RiakMapReduceQuery()
-                .Inputs("BucketName");
+    .Inputs("BucketName");
 {% endhighlight %}
 
 To specify Bucket/Key pairs, do the following:
 
 {% highlight csharp %}
-var items = new []
-            {
-                new RiakBucketKeyInput("bucket1", "key1"),
-                new RiakBucketKeyInput("bucket1", "key2"),
-                new RiakBucketKeyInput("bucket2", "key3")
-            };
+var inputs = new RiakBucketKeyInput()
+    .Add("bucket1", "key1")
+    .Add("bucket2", "key2")
+    .Add("bucket3", "key3");
+
 var query = new RiakMapReduceQuery()
-                .Inputs(items);
+    .Inputs(inputs);
 {% endhighlight %}
 
 To specify Bucket/Key/Arg triples, do the following:
 
 {% highlight csharp %}
-var items = new []
-            {
-                new RiakBucketKeyArgInput("bucket1", "key1", 42),
-                new RiakBucketKeyArgInput("bucket1", "key2", 3.1415),
-                new RiakBucketKeyArgInput("bucket2", "key3", "slartibartfast")
-            };
+var inputs = new RiakBucketKeyInput()
+    .Add("bucket1", "key1", 3.1415)
+    .Add("bucket2", "key2", "slartibartfast")
+    .Add("bucket3", "key3", new { foo = "bar", baz = 10 });
+
 var query = new RiakMapReduceQuery()
-                .Inputs(items);
+    .Inputs(inputs);
 {% endhighlight %}
 
 Now that the inputs have been specified, the next step is to write a series of Map and Reduce phases.
@@ -87,16 +85,16 @@ Here are a few examples:
 
 {% highlight csharp %}
 var query1 = new RiakMapReduceQuery()
-                 .Inputs("BucketName")
-                 .MapJs(m => m.Name("Riak.mapValuesJson").Keep(true));
+    .Inputs("BucketName")
+    .MapJs(m => m.Name("Riak.mapValuesJson").Keep(true));
 
 var query2 = new RiakMapReduceQuery()
-                 .Inputs("SomeBucket")
-                 .MapJs(m => m.BucketKey("mapred_scripts", "do_magic").Argument("foo"));
+    .Inputs("SomeBucket")
+    .MapJs(m => m.BucketKey("mapred_scripts", "do_magic").Argument("foo"));
 
 var query3 = new RiakMapReduceQuery()
-                 .Inputs(new []{new RiakBucketKeyArgInput("bucket1", "key1", 42)})
-                 .MapJs(m => m.Source("function(v,d,a){return [d == v ? 1 : 0];}"));
+    .Inputs(new []{new RiakBucketKeyArgInput("bucket1", "key1", 42)})
+    .MapJs(m => m.Source("function(v,d,a){return [d == v ? 1 : 0];}"));
 {% endhighlight %}
 
 #### MapErlang() ####
@@ -113,8 +111,8 @@ Here's an example:
 
 {% highlight csharp %}
 var query = new RiakMapReduceQuery()
-                .Inputs("BucketName")
-                .MapErlang(m => m.ModFun("my_module", "the_function").Keep(true));
+    .Inputs("BucketName")
+    .MapErlang(m => m.ModFun("my_module", "the_function").Keep(true));
 {% endhighlight %}
 
 #### ReduceJs() and ReduceErlang() ####
@@ -125,9 +123,9 @@ Here's an example:
 
 {% highlight csharp %}
 var query = new RiakMapReduceQuery()
-                .Inputs("BucketName")
-                .MapJs(m => m.Source(@"function(o){return[1];}"))
-                .ReduceJs(m => m.Name(@"Riak.reduceSum").Keep(true));
+    .Inputs("BucketName")
+    .MapJs(m => m.Source(@"function(o){return[1];}"))
+    .ReduceJs(m => m.Name(@"Riak.reduceSum").Keep(true));
 {% endhighlight %}
 
 #### Link() ####
@@ -145,21 +143,21 @@ Here are a few examples;
 {% highlight csharp %}
 // get all friends in the "people" bucket (avoids pets and programmers)
 var query1 = new RiakMapReduceQuery()
-                 .Inputs("people")
-                 .Link(l => l.Tag("friend").Bucket("people"))
-                 .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
+    .Inputs("people")
+    .Link(l => l.Tag("friend").Bucket("people"))
+    .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
 
 // get every link available for each person
 var query2 = new RiakMapReduceQuery()
-                 .Inputs("people")
-                 .Link(l => l.AllLinks())
-                 .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
+    .Inputs("people")
+    .Link(l => l.AllLinks())
+    .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
 
 // get every language OJ doesn't like
 var query3 = new RiakMapReduceQuery()
-                 .Inputs(new []{new RiakBucketKeyInput("people", "oj")})
-                 .Link(l => l.Tag("dislike").Bucket("languages"))
-                 .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
+    .Inputs(new []{new RiakBucketKeyInput("people", "oj")})
+    .Link(l => l.Tag("dislike").Bucket("languages"))
+    .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
 {% endhighlight %}
 
 The result set of the last query <del>would</del>may include PHP.
@@ -174,10 +172,10 @@ Here's an example:
 
 {% highlight csharp %}
 var query = new RiakMapReduceQuery()
-                .Inputs("people")
-                .Filter(new Matches("jeremiah"))
-                .Link(l => l.Tag("friends").Bucket("people"))
-                .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
+    .Inputs("people")
+    .Filter(new Matches("jeremiah"))
+    .Link(l => l.Tag("friends").Bucket("people"))
+    .ReduceErlang(r => r.ModFun("riak_kv_mapreduce", "reduce_set_union").Keep(true));
 {% endhighlight %}
 
 For more in-depth information about Key Filters and the types that are available through this interface, take a look at our [Key Filter documentation][KeyFilterDocs] page.
@@ -251,19 +249,19 @@ Congrats! You're now a Map/Reduce guru!
 ### Future Plans ###
 Long term we'll looking to build a LINQ provider for this interface, but this is a low priority feature. If this is a deal-breaker for you, [get in touch][GetInTouch]!
 
-[GetInTouch]: https://github.com/DistributedNonsense/CorrugatedIron/issues "CorrugatedIron issues"
-[KeyFilterDocs]: /documentation/MapReduce.KeyFilters.html
-[MRInputs]: http://wiki.basho.com/MapReduce.html#Inputs "Riak Map/Reduce Inputs"
-[MRPhases]: http://wiki.basho.com/MapReduce.html#Phase-functions "Riak Map/Reduce Phase Functions"
-[MRWiki]: http://wiki.basho.com/MapReduce.html "Riak Map/Reduce"
-[MR]: http://en.wikipedia.org/wiki/MapReduce "Map/Reduce definition"
-[RiakBucketKeyArgInput.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Inputs/RiakBucketKeyArgInput.cs "RiakBucketKeyArgInput class"
-[RiakBucketKeyInput.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Inputs/RiakBucketKeyInput.cs "RiakBucketKeyInput class"
-[RiakFluentActionPhaseErlang.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Fluent/RiakFluentActionPhaseErlang.cs "RiakFluentActionPhaseErlang class"
-[RiakFluentActionPhaseJavascript.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Fluent/RiakFluentActionPhaseJavascript.cs "RiakFluentActionPhaseJavascript class"
-[RiakFluentLinkPhase.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Fluent/RiakFluentLinkPhase.cs "RiakFluentLinkPhase class"
-[RiakKeyFilters]: http://wiki.basho.com/Key-Filters.html "Key Filter in Riak"
-[RiakLink]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/RiakLink.cs "RiakLink class"
-[RiakLinks]: http://wiki.basho.com/Links.html "Links in Riak"
-[RiakMapReduceQuery.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/RiakMapReduceQuery.cs "RiakMapReduceQuery class"
-[fluent]: http://en.wikipedia.org/wiki/Fluent_interface "Fluent Interface"
+  [GetInTouch]: https://github.com/DistributedNonsense/CorrugatedIron/issues "CorrugatedIron issues"
+  [KeyFilterDocs]: /documentation/MapReduce.KeyFilters.html
+  [MRInputs]: http://wiki.basho.com/MapReduce.html#Inputs "Riak Map/Reduce Inputs"
+  [MRPhases]: http://wiki.basho.com/MapReduce.html#Phase-functions "Riak Map/Reduce Phase Functions"
+  [MRWiki]: http://wiki.basho.com/MapReduce.html "Riak Map/Reduce"
+  [MR]: http://en.wikipedia.org/wiki/MapReduce "Map/Reduce definition"
+  [RiakBucketKeyArgInput.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Inputs/RiakBucketKeyArgInput.cs "RiakBucketKeyArgInput class"
+  [RiakBucketKeyInput.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Inputs/RiakBucketKeyInput.cs "RiakBucketKeyInput class"
+  [RiakFluentActionPhaseErlang.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Fluent/RiakFluentActionPhaseErlang.cs "RiakFluentActionPhaseErlang class"
+  [RiakFluentActionPhaseJavascript.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Fluent/RiakFluentActionPhaseJavascript.cs "RiakFluentActionPhaseJavascript class"
+  [RiakFluentLinkPhase.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/Fluent/RiakFluentLinkPhase.cs "RiakFluentLinkPhase class"
+  [RiakKeyFilters]: http://wiki.basho.com/Key-Filters.html "Key Filter in Riak"
+  [RiakLink]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/RiakLink.cs "RiakLink class"
+  [RiakLinks]: http://wiki.basho.com/Links.html "Links in Riak"
+  [RiakMapReduceQuery.cs]: https://github.com/DistributedNonsense/CorrugatedIron/blob/master/CorrugatedIron/Models/MapReduce/RiakMapReduceQuery.cs "RiakMapReduceQuery class"
+  [fluent]: http://en.wikipedia.org/wiki/Fluent_interface "Fluent Interface"
