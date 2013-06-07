@@ -26,8 +26,8 @@ A Riak cluster has some arbitrary number of physical nodes. In order to protect 
 The RiakClient API has a simple `Get(string bucket, string key, unit rVal)` method that makes reading from Riak easy. Since a key is uniquely identified by a bucket/key combination, the only thing that you need to do to find a single key is look it up using that bucket/key combination.
 
 {% highlight csharp %}
-var result = Client.Get("my_bucket", "my_key");
-var myObject = result.Value.GetObject();
+var result = Client.Get("contributors", "jeremiah@brentozar.com");
+return result.Value.GetObject<Person> ();
 {% endhighlight %}
 
 That's it, really. `Get()` returns an instance of `RiakResult<RiakObject>`. `RiakResult<RiakObject>` has a few properties and methods, but the important ones here are `IsSuccess`, `ErrorMessage`, `ResultCode`, and `Value`.
@@ -41,12 +41,12 @@ When a response is returned from Riak, it's important to check `IsSuccess`. This
 ### Dealing with Failure ###
 
 {% highlight csharp %}
-var result = Client.Get("my_bucket", "missing_key");
+var result = Client.Get("contributors", "missing_key");
 
 if (result.IsSuccess) {
-  return result.Value.GetObject();
+  return result.Value.GetObject<Person>();
 } else {
-  // what now, brown cow>?
+  throw new Exception("What now, brown cow?");
 }
 {% endhighlight %}
 
@@ -81,9 +81,18 @@ A successful read request occurs when `rVal` number of nodes respond with *the s
 Writing data is just as easy as reading it:
 
 {% highlight csharp %}
-var object = new RiakObject("bucket", "key", { something = "value"; something_else = 3 });
-object.ContentType = "application/json";
-Client.Put(object);
+public void WritingData() {
+  var p = new Person() {
+    EmailAddress = "oj@buffered.io",
+    FirstName = "OJ",
+    LastName = "Reeves"
+  };
+
+  var o = new RiakObject("contributors", p.EmailAddress, p);
+
+  o.ContentType = "application/json";
+  Client.Put(o);
+}
 {% endhighlight %}
 
 Actually, writing data is probably easier than reading it. When you read data, you have to figure out if there is actually there when the read is done. When you write data to Riak, that worry is gone (for the most part). If you've ever worked with a relational database you've probably written code to detect if an object is new or not and save it in one of several different ways. Saving data to Riak is a matter of pushing data at Riak. If there's already a key in a bucket, the key is overwritten. If bucket/key combo doesn't exist, a new record is inserted. Riak takes care of that mess for you.
@@ -102,20 +111,71 @@ Although `ContentType` can be set to any arbitrary value, it's considered polite
 
 CorrugatedIron will automatically handle converting objects to the appropriate `ContentType` if you supply a content type for JSON, Protocol Buffers, XML, or plain text. We make use of several libraries to make this possible, but that doesn't mean you're limited to our choices. You can easily specify a custom serialization method - so long as it converts your custom object to a byte array.
 
+Assuming a custom conversion delegate:
+
 {% highlight csharp %}
-var object = new RiakObject("bucket", "key");
-object.SetObject(myMathematicaObject, 
-                 "application/mathematica", 
-                 myMathematicaToByteArrayConversionDelegate);
-Client.Put(object);
+private SerializeObjectToByteArray<Person> BackwardsPersonToByteArrayConversionDelegate = new SerializeObjectToByteArray<Person>
+    (person => 
+    {
+        var newPerson = new Person() {
+            EmailAddress = person.EmailAddress,
+            FirstName = person.FirstName,
+            LastName = person.LastName
+        };
+
+        Array.Reverse(newPerson.FirstName.ToCharArray());
+        Array.Reverse(newPerson.LastName.ToCharArray());
+
+        var ms = new MemoryStream();
+        Serializer.Serialize(ms, newPerson);
+        return ms.ToArray();
+    });
+
+
 {% endhighlight %}
 
-When it's time to read that Mathematica object back from Riak, you can do the same thing:
+CorrugatedIron can use this custom conversion delegate as follows:
 
 {% highlight csharp %}
-var result = Client.Get("bucket", "key");
+var p = new Person() {
+    EmailAddress = "example@example.com",
+    FirstName = "John",
+    LastName = "Smith"
+};
+
+var o = new RiakObject("backwards_people", p.EmailAddress);
+o.SetObject(p, 
+            "application/backwards_people", 
+            BackwardsPersonToByteArrayConversionDelegate);
+Client.Put(o);
+{% endhighlight %}
+
+When it's time to read that reversed Person object back from Riak, you can do the same thing. First set up a custom `DeserializeObject<T>`:
+
+{% highlight csharp %}
+private DeserializeObject<Person> PersonFromBackwardsByteArrayConversionDelegate = new DeserializeObject<Person>
+    ((person, contentType) =>
+    {
+        var ms = new MemoryStream();
+        ms.Write(person, 0, person.Length);
+
+        var p = Serializer.Deserialize<Person>(ms);
+
+        Array.Reverse(p.FirstName.ToCharArray());
+        Array.Reverse(p.LastName.ToCharArray());
+
+        return p;
+    });
+{% endhighlight %}
+
+We can use `PersonFromBackwardsByteArrayConversionDelegate` to read data back from Riak:
+
+{% highlight csharp %}
+var result = Client.Get("backwards_people", "example@example.com");
 var value = result.Value;
-var myMathematicObject = value.GetObject<Mathematica>(myMathematicFromByteArrayConversionDelegate);
+var p = value.GetObject<Person>(PersonFromBackwardsByteArrayConversionDelegate);
+
+return p;
 {% endhighlight %}
 
 ### Deleting Data ###
