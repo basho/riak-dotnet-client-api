@@ -90,7 +90,6 @@ public void WritingData() {
 
   var o = new RiakObject("contributors", p.EmailAddress, p);
 
-  o.ContentType = "application/json";
   Client.Put(o);
 }
 {% endhighlight %}
