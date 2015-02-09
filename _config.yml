@@ -1,6 +1,6 @@
 ---
 markdown     : rdiscount
-pygments     : true
+highlighter  : rouge
 pagination   : 5
 permalink    : /blog/:title
 ---
