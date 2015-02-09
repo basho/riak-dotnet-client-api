@@ -1,5 +1,5 @@
 language: ruby
-script: "bundle exec jekyll build"
+script: "bundle exec jekyll build --safe"
 branches:
   only:
     - gh-pages
