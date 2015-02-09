@@ -3,4 +3,5 @@ markdown     : rdiscount
 highlighter  : rouge
 pagination   : 5
 permalink    : /blog/:title
+encoding     : utf-8
 ---
