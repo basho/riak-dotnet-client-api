@@ -118,7 +118,6 @@ GEM
       parslet (~> 1.5.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    wdm (0.1.0)
     yajl-ruby (1.2.1)
 
 PLATFORMS
@@ -127,4 +126,3 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   rouge
-  wdm (>= 0.1.0)
