@@ -1,7 +1,0 @@
----
-markdown     : rdiscount
-highlighter  : pygments
-pagination   : 5
-permalink    : /blog/:title
-encoding     : utf-8
----

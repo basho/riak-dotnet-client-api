@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="affdd103-7adc-451f-82a6-1dbc2f9080af" Title="API Reference" Url="html/R_Project_Documentation.htm">
+    <HelpTOCNode Id="eadf5a3a-713f-44c9-ba68-e902664d0308" Title="RiakClient" Url="html/N_RiakClient.htm">
+      <HelpTOCNode Id="330a4404-8943-483d-89f6-6a4f3ecbdf80" Title="IRiakAsyncClient Interface" Url="html/T_RiakClient_IRiakAsyncClient.htm">
+        <HelpTOCNode Id="096b3cef-58ac-4d85-9ba0-0dd0f79b3c70" Title="IRiakAsyncClient Methods" Url="html/Methods_T_RiakClient_IRiakAsyncClient.htm">
+          <HelpTOCNode Id="e8968627-7e7a-442e-bafe-701a585ce232" Title="Batch Method " Url="html/Overload_RiakClient_IRiakAsyncClient_Batch.htm">
+            <HelpTOCNode Title="Batch Method (Action(IRiakBatchClient))" Url="html/M_RiakClient_IRiakAsyncClient_Batch.htm" />
+            <HelpTOCNode Title="Batch(T) Method (Func(IRiakBatchClient, T))" Url="html/M_RiakClient_IRiakAsyncClient_Batch__1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="04b3297b-fecf-4592-948a-f5d4b81ad594" Title="Delete Method " Url="html/Overload_RiakClient_IRiakAsyncClient_Delete.htm">
+            <HelpTOCNode Title="Delete Method (RiakObject, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Delete.htm" />
+            <HelpTOCNode Title="Delete Method (RiakObjectId, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Delete_1.htm" />
+            <HelpTOCNode Title="Delete Method (IEnumerable(RiakObjectId), RiakDeleteOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Delete_2.htm" />
+            <HelpTOCNode Title="Delete Method (String, String, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Delete_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="895dab05-c681-46e8-863d-58de050860f7" Title="Get Method " Url="html/Overload_RiakClient_IRiakAsyncClient_Get.htm">
+            <HelpTOCNode Title="Get Method (RiakObjectId, RiakGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Get.htm" />
+            <HelpTOCNode Title="Get Method (IEnumerable(RiakObjectId), RiakGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Get_1.htm" />
+            <HelpTOCNode Title="Get Method (String, String, RiakGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Get_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetBucketProperties Method " Url="html/M_RiakClient_IRiakAsyncClient_GetBucketProperties.htm" />
+          <HelpTOCNode Title="GetCounter Method " Url="html/M_RiakClient_IRiakAsyncClient_GetCounter.htm" />
+          <HelpTOCNode Id="398b8f39-4a49-45e1-a98a-ffb2f7e9e837" Title="GetSecondaryIndex Method " Url="html/Overload_RiakClient_IRiakAsyncClient_GetSecondaryIndex.htm">
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_GetSecondaryIndex.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_GetSecondaryIndex_2.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, BigInteger, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_GetSecondaryIndex_1.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, String, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_GetSecondaryIndex_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetServerInfo Method " Url="html/M_RiakClient_IRiakAsyncClient_GetServerInfo.htm" />
+          <HelpTOCNode Title="IncrementCounter Method " Url="html/M_RiakClient_IRiakAsyncClient_IncrementCounter.htm" />
+          <HelpTOCNode Title="ListBuckets Method " Url="html/M_RiakClient_IRiakAsyncClient_ListBuckets.htm" />
+          <HelpTOCNode Title="ListKeys Method " Url="html/M_RiakClient_IRiakAsyncClient_ListKeys.htm" />
+          <HelpTOCNode Title="ListKeysFromIndex Method " Url="html/M_RiakClient_IRiakAsyncClient_ListKeysFromIndex.htm" />
+          <HelpTOCNode Title="MapReduce Method " Url="html/M_RiakClient_IRiakAsyncClient_MapReduce.htm" />
+          <HelpTOCNode Title="Ping Method " Url="html/M_RiakClient_IRiakAsyncClient_Ping.htm" />
+          <HelpTOCNode Id="cef90cac-e5bc-44e1-bf20-3e29c5eaf608" Title="Put Method " Url="html/Overload_RiakClient_IRiakAsyncClient_Put.htm">
+            <HelpTOCNode Title="Put Method (RiakObject, RiakPutOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Put.htm" />
+            <HelpTOCNode Title="Put Method (IEnumerable(RiakObject), RiakPutOptions)" Url="html/M_RiakClient_IRiakAsyncClient_Put_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="3bd1c5a0-45cc-4a13-b708-0a6d8bc02a77" Title="ResetBucketProperties Method " Url="html/Overload_RiakClient_IRiakAsyncClient_ResetBucketProperties.htm">
+            <HelpTOCNode Title="ResetBucketProperties Method (String)" Url="html/M_RiakClient_IRiakAsyncClient_ResetBucketProperties.htm" />
+            <HelpTOCNode Title="ResetBucketProperties Method (String, Boolean)" Url="html/M_RiakClient_IRiakAsyncClient_ResetBucketProperties_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Search Method " Url="html/M_RiakClient_IRiakAsyncClient_Search.htm" />
+          <HelpTOCNode Id="68a2fd4c-56cf-4eb2-8f0f-8af20846f154" Title="SetBucketProperties Method " Url="html/Overload_RiakClient_IRiakAsyncClient_SetBucketProperties.htm">
+            <HelpTOCNode Title="SetBucketProperties Method (String, RiakBucketProperties)" Url="html/M_RiakClient_IRiakAsyncClient_SetBucketProperties.htm" />
+            <HelpTOCNode Title="SetBucketProperties Method (String, RiakBucketProperties, Boolean)" Url="html/M_RiakClient_IRiakAsyncClient_SetBucketProperties_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="02a4448e-b5c3-49fe-b309-25c3d79fbdbd" Title="StreamGetSecondaryIndex Method " Url="html/Overload_RiakClient_IRiakAsyncClient_StreamGetSecondaryIndex.htm">
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_StreamGetSecondaryIndex.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_StreamGetSecondaryIndex_2.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, BigInteger, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_StreamGetSecondaryIndex_1.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, String, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakAsyncClient_StreamGetSecondaryIndex_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StreamListBuckets Method " Url="html/M_RiakClient_IRiakAsyncClient_StreamListBuckets.htm" />
+          <HelpTOCNode Title="StreamListKeys Method " Url="html/M_RiakClient_IRiakAsyncClient_StreamListKeys.htm" />
+          <HelpTOCNode Title="StreamMapReduce Method " Url="html/M_RiakClient_IRiakAsyncClient_StreamMapReduce.htm" />
+          <HelpTOCNode Title="WalkLinks Method " Url="html/M_RiakClient_IRiakAsyncClient_WalkLinks.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="94546292-1947-4fd1-8229-4e40926f602a" Title="IRiakBatchClient Interface" Url="html/T_RiakClient_IRiakBatchClient.htm">
+        <HelpTOCNode Id="ecb1d7db-4464-4835-a4bf-3205dae0a078" Title="IRiakBatchClient Methods" Url="html/Methods_T_RiakClient_IRiakBatchClient.htm">
+          <HelpTOCNode Id="7431a8d2-f6d2-4692-b582-364d30c3d564" Title="Delete Method " Url="html/Overload_RiakClient_IRiakBatchClient_Delete.htm">
+            <HelpTOCNode Title="Delete Method (RiakObject, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakBatchClient_Delete.htm" />
+            <HelpTOCNode Title="Delete Method (RiakObjectId, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakBatchClient_Delete_1.htm" />
+            <HelpTOCNode Title="Delete Method (IEnumerable(RiakObjectId), RiakDeleteOptions)" Url="html/M_RiakClient_IRiakBatchClient_Delete_2.htm" />
+            <HelpTOCNode Title="Delete Method (String, String, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakBatchClient_Delete_3.htm" />
+            <HelpTOCNode Title="Delete Method (String, String, String, RiakDeleteOptions)" Url="html/M_RiakClient_IRiakBatchClient_Delete_4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="DeleteSearchIndex Method " Url="html/M_RiakClient_IRiakBatchClient_DeleteSearchIndex.htm" />
+          <HelpTOCNode Id="9c851ca5-f0cb-426e-b718-7aa6da9880d2" Title="DtFetchCounter Method " Url="html/Overload_RiakClient_IRiakBatchClient_DtFetchCounter.htm">
+            <HelpTOCNode Title="DtFetchCounter Method (RiakObjectId, RiakDtFetchOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtFetchCounter.htm" />
+            <HelpTOCNode Title="DtFetchCounter Method (String, String, String, RiakDtFetchOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtFetchCounter_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="acf44e26-91dc-43ca-9fc9-9c61c3820a9e" Title="DtFetchMap Method " Url="html/Overload_RiakClient_IRiakBatchClient_DtFetchMap.htm">
+            <HelpTOCNode Title="DtFetchMap Method (RiakObjectId, RiakDtFetchOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtFetchMap.htm" />
+            <HelpTOCNode Title="DtFetchMap Method (String, String, String, RiakDtFetchOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtFetchMap_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1fdd589b-f9aa-4e97-af64-dda343abb22f" Title="DtFetchSet Method " Url="html/Overload_RiakClient_IRiakBatchClient_DtFetchSet.htm">
+            <HelpTOCNode Title="DtFetchSet Method (RiakObjectId, RiakDtFetchOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtFetchSet.htm" />
+            <HelpTOCNode Title="DtFetchSet Method (String, String, String, RiakDtFetchOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtFetchSet_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e514d8d5-4385-4f0e-85e7-1a9372cebb2d" Title="DtUpdateCounter Method " Url="html/Overload_RiakClient_IRiakBatchClient_DtUpdateCounter.htm">
+            <HelpTOCNode Title="DtUpdateCounter Method (RiakObjectId, Int64, RiakDtUpdateOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtUpdateCounter.htm" />
+            <HelpTOCNode Title="DtUpdateCounter Method (String, String, String, Int64, RiakDtUpdateOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtUpdateCounter_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="7fdb3b0e-4820-49d6-8d27-05dccd4ed7be" Title="DtUpdateMap Method " Url="html/Overload_RiakClient_IRiakBatchClient_DtUpdateMap.htm">
+            <HelpTOCNode Title="DtUpdateMap(T) Method (RiakObjectId, SerializeObjectToByteArray`1(T), Byte[], List(RiakDtMapField), List(MapUpdate), RiakDtUpdateOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtUpdateMap__1.htm" />
+            <HelpTOCNode Title="DtUpdateMap(T) Method (String, String, String, SerializeObjectToByteArray`1(T), Byte[], List(RiakDtMapField), List(MapUpdate), RiakDtUpdateOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtUpdateMap__1_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="7d4afd9e-f999-44e4-abcd-e5f0f73a571b" Title="DtUpdateSet Method " Url="html/Overload_RiakClient_IRiakBatchClient_DtUpdateSet.htm">
+            <HelpTOCNode Title="DtUpdateSet(T) Method (RiakObjectId, SerializeObjectToByteArray`1(T), Byte[], List(T), List(T), RiakDtUpdateOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtUpdateSet__1.htm" />
+            <HelpTOCNode Title="DtUpdateSet(T) Method (String, String, String, SerializeObjectToByteArray`1(T), Byte[], List(T), List(T), RiakDtUpdateOptions)" Url="html/M_RiakClient_IRiakBatchClient_DtUpdateSet__1_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a6955648-2502-4e8b-b367-0bfac17e8cc7" Title="Get Method " Url="html/Overload_RiakClient_IRiakBatchClient_Get.htm">
+            <HelpTOCNode Title="Get Method (RiakObjectId, RiakGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_Get.htm" />
+            <HelpTOCNode Title="Get Method (IEnumerable(RiakObjectId), RiakGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_Get_1.htm" />
+            <HelpTOCNode Title="Get Method (String, String, RiakGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_Get_2.htm" />
+            <HelpTOCNode Title="Get Method (String, String, String, RiakGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_Get_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5410deaa-233a-4300-81bb-952f418b8d35" Title="GetBucketProperties Method " Url="html/Overload_RiakClient_IRiakBatchClient_GetBucketProperties.htm">
+            <HelpTOCNode Title="GetBucketProperties Method (String)" Url="html/M_RiakClient_IRiakBatchClient_GetBucketProperties.htm" />
+            <HelpTOCNode Title="GetBucketProperties Method (String, String)" Url="html/M_RiakClient_IRiakBatchClient_GetBucketProperties_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetCounter Method " Url="html/M_RiakClient_IRiakBatchClient_GetCounter.htm" />
+          <HelpTOCNode Title="GetSearchIndex Method " Url="html/M_RiakClient_IRiakBatchClient_GetSearchIndex.htm" />
+          <HelpTOCNode Title="GetSearchSchema Method " Url="html/M_RiakClient_IRiakBatchClient_GetSearchSchema.htm" />
+          <HelpTOCNode Id="285c9bef-351c-4892-af18-943f9cd04ea2" Title="GetSecondaryIndex Method " Url="html/Overload_RiakClient_IRiakBatchClient_GetSecondaryIndex.htm">
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_GetSecondaryIndex.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_GetSecondaryIndex_2.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, BigInteger, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_GetSecondaryIndex_1.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, String, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_GetSecondaryIndex_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetServerInfo Method " Url="html/M_RiakClient_IRiakBatchClient_GetServerInfo.htm" />
+          <HelpTOCNode Title="GetServerStatus Method " Url="html/M_RiakClient_IRiakBatchClient_GetServerStatus.htm" />
+          <HelpTOCNode Title="IncrementCounter Method " Url="html/M_RiakClient_IRiakBatchClient_IncrementCounter.htm" />
+          <HelpTOCNode Id="6860be43-0a38-4996-b333-ecaa1b2c6d24" Title="ListBuckets Method " Url="html/Overload_RiakClient_IRiakBatchClient_ListBuckets.htm">
+            <HelpTOCNode Title="ListBuckets Method " Url="html/M_RiakClient_IRiakBatchClient_ListBuckets.htm" />
+            <HelpTOCNode Title="ListBuckets Method (String)" Url="html/M_RiakClient_IRiakBatchClient_ListBuckets_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="677586b8-5117-4965-b16d-f0a10afcc547" Title="ListKeys Method " Url="html/Overload_RiakClient_IRiakBatchClient_ListKeys.htm">
+            <HelpTOCNode Title="ListKeys Method (String)" Url="html/M_RiakClient_IRiakBatchClient_ListKeys.htm" />
+            <HelpTOCNode Title="ListKeys Method (String, String)" Url="html/M_RiakClient_IRiakBatchClient_ListKeys_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="146afb8a-592d-49f1-a803-76dc4f3625d1" Title="ListKeysFromIndex Method " Url="html/Overload_RiakClient_IRiakBatchClient_ListKeysFromIndex.htm">
+            <HelpTOCNode Title="ListKeysFromIndex Method (String)" Url="html/M_RiakClient_IRiakBatchClient_ListKeysFromIndex.htm" />
+            <HelpTOCNode Title="ListKeysFromIndex Method (String, String)" Url="html/M_RiakClient_IRiakBatchClient_ListKeysFromIndex_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MapReduce Method " Url="html/M_RiakClient_IRiakBatchClient_MapReduce.htm" />
+          <HelpTOCNode Title="Ping Method " Url="html/M_RiakClient_IRiakBatchClient_Ping.htm" />
+          <HelpTOCNode Id="5f3ff2ac-2a8c-40bf-8a0b-dfb81c7289bc" Title="Put Method " Url="html/Overload_RiakClient_IRiakBatchClient_Put.htm">
+            <HelpTOCNode Title="Put Method (RiakObject, RiakPutOptions)" Url="html/M_RiakClient_IRiakBatchClient_Put.htm" />
+            <HelpTOCNode Title="Put Method (IEnumerable(RiakObject), RiakPutOptions)" Url="html/M_RiakClient_IRiakBatchClient_Put_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="PutSearchIndex Method " Url="html/M_RiakClient_IRiakBatchClient_PutSearchIndex.htm" />
+          <HelpTOCNode Title="PutSearchSchema Method " Url="html/M_RiakClient_IRiakBatchClient_PutSearchSchema.htm" />
+          <HelpTOCNode Id="565cf5e0-f497-4750-895e-0fb383c58054" Title="ResetBucketProperties Method " Url="html/Overload_RiakClient_IRiakBatchClient_ResetBucketProperties.htm">
+            <HelpTOCNode Title="ResetBucketProperties Method (String)" Url="html/M_RiakClient_IRiakBatchClient_ResetBucketProperties.htm" />
+            <HelpTOCNode Title="ResetBucketProperties Method (String, Boolean)" Url="html/M_RiakClient_IRiakBatchClient_ResetBucketProperties_1.htm" />
+            <HelpTOCNode Title="ResetBucketProperties Method (String, String)" Url="html/M_RiakClient_IRiakBatchClient_ResetBucketProperties_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Search Method " Url="html/M_RiakClient_IRiakBatchClient_Search.htm" />
+          <HelpTOCNode Id="0b9732c1-f27e-489f-8e13-c41384a2f1b0" Title="SetBucketProperties Method " Url="html/Overload_RiakClient_IRiakBatchClient_SetBucketProperties.htm">
+            <HelpTOCNode Title="SetBucketProperties Method (String, RiakBucketProperties)" Url="html/M_RiakClient_IRiakBatchClient_SetBucketProperties.htm" />
+            <HelpTOCNode Title="SetBucketProperties Method (String, RiakBucketProperties, Boolean)" Url="html/M_RiakClient_IRiakBatchClient_SetBucketProperties_1.htm" />
+            <HelpTOCNode Title="SetBucketProperties Method (String, String, RiakBucketProperties)" Url="html/M_RiakClient_IRiakBatchClient_SetBucketProperties_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="fa9feadb-7e00-4687-92cd-a8156ba44e4e" Title="StreamGetSecondaryIndex Method " Url="html/Overload_RiakClient_IRiakBatchClient_StreamGetSecondaryIndex.htm">
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_StreamGetSecondaryIndex.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_StreamGetSecondaryIndex_2.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, BigInteger, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_StreamGetSecondaryIndex_1.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, String, String, RiakIndexGetOptions)" Url="html/M_RiakClient_IRiakBatchClient_StreamGetSecondaryIndex_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StreamListBuckets Method " Url="html/M_RiakClient_IRiakBatchClient_StreamListBuckets.htm" />
+          <HelpTOCNode Id="2f77cf6c-e3a0-4324-905a-56b31d14419f" Title="StreamListKeys Method " Url="html/Overload_RiakClient_IRiakBatchClient_StreamListKeys.htm">
+            <HelpTOCNode Title="StreamListKeys Method (String)" Url="html/M_RiakClient_IRiakBatchClient_StreamListKeys.htm" />
+            <HelpTOCNode Title="StreamListKeys Method (String, String)" Url="html/M_RiakClient_IRiakBatchClient_StreamListKeys_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StreamMapReduce Method " Url="html/M_RiakClient_IRiakBatchClient_StreamMapReduce.htm" />
+          <HelpTOCNode Title="WalkLinks Method " Url="html/M_RiakClient_IRiakBatchClient_WalkLinks.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="fb9b7772-4713-443d-8719-bd5c07b0a487" Title="IRiakBatchClient Properties" Url="html/Properties_T_RiakClient_IRiakBatchClient.htm">
+          <HelpTOCNode Title="RetryCount Property " Url="html/P_RiakClient_IRiakBatchClient_RetryCount.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c370330a-b461-43b5-9dd9-6e23f477f5be" Title="IRiakClient Interface" Url="html/T_RiakClient_IRiakClient.htm">
+        <HelpTOCNode Id="28e067d1-43eb-4f97-a917-159b85cdf007" Title="IRiakClient Methods" Url="html/Methods_T_RiakClient_IRiakClient.htm">
+          <HelpTOCNode Id="e439aa68-1728-4cb8-a8d2-1f971cd0857b" Title="Batch Method " Url="html/Overload_RiakClient_IRiakClient_Batch.htm">
+            <HelpTOCNode Title="Batch Method (Action(IRiakBatchClient))" Url="html/M_RiakClient_IRiakClient_Batch.htm" />
+            <HelpTOCNode Title="Batch(T) Method (Func(IRiakBatchClient, T))" Url="html/M_RiakClient_IRiakClient_Batch__1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="80b3b47c-74a1-49ee-85b4-f6f2b3abf063" Title="IRiakClient Properties" Url="html/Properties_T_RiakClient_IRiakClient.htm">
+          <HelpTOCNode Title="Async Property " Url="html/P_RiakClient_IRiakClient_Async.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="f2cf15c0-74fa-4151-a519-7bfa752c4158" Title="IRiakEndPoint Interface" Url="html/T_RiakClient_IRiakEndPoint.htm">
+        <HelpTOCNode Id="24c48fb4-0241-470c-99aa-017897570c95" Title="IRiakEndPoint Methods" Url="html/Methods_T_RiakClient_IRiakEndPoint.htm">
+          <HelpTOCNode Title="CreateClient Method " Url="html/M_RiakClient_IRiakEndPoint_CreateClient.htm" />
+          <HelpTOCNode Id="48e367f0-e374-405c-b87b-76c5e2011d11" Title="UseConnection Method " Url="html/Overload_RiakClient_IRiakEndPoint_UseConnection.htm">
+            <HelpTOCNode Title="UseConnection(TResult) Method (Func(IRiakConnection, RiakResult(TResult)), Int32)" Url="html/M_RiakClient_IRiakEndPoint_UseConnection__1.htm" />
+            <HelpTOCNode Title="UseConnection Method (Func(IRiakConnection, RiakResult), Int32)" Url="html/M_RiakClient_IRiakEndPoint_UseConnection.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="UseDelayedConnection(TResult) Method " Url="html/M_RiakClient_IRiakEndPoint_UseDelayedConnection__1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="cf344d96-63f5-4813-b37c-2a68a570507e" Title="IRiakEndPoint Properties" Url="html/Properties_T_RiakClient_IRiakEndPoint.htm">
+          <HelpTOCNode Title="RetryWaitTime Property " Url="html/P_RiakClient_IRiakEndPoint_RetryWaitTime.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="ResultCode Enumeration" Url="html/T_RiakClient_ResultCode.htm" />
+      <HelpTOCNode Id="ca450c38-2a2a-4304-b025-7a9b2622ac3d" Title="RiakClient Class" Url="html/T_RiakClient_RiakClient.htm">
+        <HelpTOCNode Id="d3b1b7fd-bb28-4a19-ac4b-debf75f3257c" Title="RiakClient Methods" Url="html/Methods_T_RiakClient_RiakClient.htm">
+          <HelpTOCNode Id="713de34f-c11f-4d4c-b8cd-37f783e2acc7" Title="Batch Method " Url="html/Overload_RiakClient_RiakClient_Batch.htm">
+            <HelpTOCNode Title="Batch Method (Action(IRiakBatchClient))" Url="html/M_RiakClient_RiakClient_Batch.htm" />
+            <HelpTOCNode Title="Batch(T) Method (Func(IRiakBatchClient, T))" Url="html/M_RiakClient_RiakClient_Batch__1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="70cfbfc4-ebc5-44dd-8b04-fa052cf757a2" Title="Delete Method " Url="html/Overload_RiakClient_RiakClient_Delete.htm">
+            <HelpTOCNode Title="Delete Method (RiakObject, RiakDeleteOptions)" Url="html/M_RiakClient_RiakClient_Delete.htm" />
+            <HelpTOCNode Title="Delete Method (RiakObjectId, RiakDeleteOptions)" Url="html/M_RiakClient_RiakClient_Delete_1.htm" />
+            <HelpTOCNode Title="Delete Method (IEnumerable(RiakObjectId), RiakDeleteOptions)" Url="html/M_RiakClient_RiakClient_Delete_2.htm" />
+            <HelpTOCNode Title="Delete Method (String, String, RiakDeleteOptions)" Url="html/M_RiakClient_RiakClient_Delete_3.htm" />
+            <HelpTOCNode Title="Delete Method (String, String, String, RiakDeleteOptions)" Url="html/M_RiakClient_RiakClient_Delete_4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="DeleteSearchIndex Method " Url="html/M_RiakClient_RiakClient_DeleteSearchIndex.htm" />
+          <HelpTOCNode Id="b8ab4a50-5096-4eb9-be66-d12438deda76" Title="DtFetchCounter Method " Url="html/Overload_RiakClient_RiakClient_DtFetchCounter.htm">
+            <HelpTOCNode Title="DtFetchCounter Method (RiakObjectId, RiakDtFetchOptions)" Url="html/M_RiakClient_RiakClient_DtFetchCounter.htm" />
+            <HelpTOCNode Title="DtFetchCounter Method (String, String, String, RiakDtFetchOptions)" Url="html/M_RiakClient_RiakClient_DtFetchCounter_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a7a0ec5a-8c98-4441-a645-415c79f2aa5d" Title="DtFetchMap Method " Url="html/Overload_RiakClient_RiakClient_DtFetchMap.htm">
+            <HelpTOCNode Title="DtFetchMap Method (RiakObjectId, RiakDtFetchOptions)" Url="html/M_RiakClient_RiakClient_DtFetchMap.htm" />
+            <HelpTOCNode Title="DtFetchMap Method (String, String, String, RiakDtFetchOptions)" Url="html/M_RiakClient_RiakClient_DtFetchMap_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="29a74f0c-316f-41ed-87e4-f35ea8a5ce38" Title="DtFetchSet Method " Url="html/Overload_RiakClient_RiakClient_DtFetchSet.htm">
+            <HelpTOCNode Title="DtFetchSet Method (RiakObjectId, RiakDtFetchOptions)" Url="html/M_RiakClient_RiakClient_DtFetchSet.htm" />
+            <HelpTOCNode Title="DtFetchSet Method (String, String, String, RiakDtFetchOptions)" Url="html/M_RiakClient_RiakClient_DtFetchSet_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1164176a-e225-43bf-bb8b-17e1f110c25a" Title="DtUpdateCounter Method " Url="html/Overload_RiakClient_RiakClient_DtUpdateCounter.htm">
+            <HelpTOCNode Title="DtUpdateCounter Method (RiakObjectId, Int64, RiakDtUpdateOptions)" Url="html/M_RiakClient_RiakClient_DtUpdateCounter.htm" />
+            <HelpTOCNode Title="DtUpdateCounter Method (String, String, String, Int64, RiakDtUpdateOptions)" Url="html/M_RiakClient_RiakClient_DtUpdateCounter_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="19105f05-af28-4f9a-9675-65266bcbe2fc" Title="DtUpdateMap Method " Url="html/Overload_RiakClient_RiakClient_DtUpdateMap.htm">
+            <HelpTOCNode Title="DtUpdateMap(T) Method (RiakObjectId, SerializeObjectToByteArray`1(T), Byte[], List(RiakDtMapField), List(MapUpdate), RiakDtUpdateOptions)" Url="html/M_RiakClient_RiakClient_DtUpdateMap__1.htm" />
+            <HelpTOCNode Title="DtUpdateMap(T) Method (String, String, String, SerializeObjectToByteArray`1(T), Byte[], List(RiakDtMapField), List(MapUpdate), RiakDtUpdateOptions)" Url="html/M_RiakClient_RiakClient_DtUpdateMap__1_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="6a99bc97-7668-473c-9ffd-1b3c96c3314b" Title="DtUpdateSet Method " Url="html/Overload_RiakClient_RiakClient_DtUpdateSet.htm">
+            <HelpTOCNode Title="DtUpdateSet(T) Method (RiakObjectId, SerializeObjectToByteArray`1(T), Byte[], List(T), List(T), RiakDtUpdateOptions)" Url="html/M_RiakClient_RiakClient_DtUpdateSet__1.htm" />
+            <HelpTOCNode Title="DtUpdateSet(T) Method (String, String, String, SerializeObjectToByteArray`1(T), Byte[], List(T), List(T), RiakDtUpdateOptions)" Url="html/M_RiakClient_RiakClient_DtUpdateSet__1_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="10a3f87f-4371-4549-a4d2-b22a7f1f275a" Title="Get Method " Url="html/Overload_RiakClient_RiakClient_Get.htm">
+            <HelpTOCNode Title="Get Method (RiakObjectId, RiakGetOptions)" Url="html/M_RiakClient_RiakClient_Get.htm" />
+            <HelpTOCNode Title="Get Method (IEnumerable(RiakObjectId), RiakGetOptions)" Url="html/M_RiakClient_RiakClient_Get_1.htm" />
+            <HelpTOCNode Title="Get Method (String, String, RiakGetOptions)" Url="html/M_RiakClient_RiakClient_Get_2.htm" />
+            <HelpTOCNode Title="Get Method (String, String, String, RiakGetOptions)" Url="html/M_RiakClient_RiakClient_Get_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4b9f67ec-33c8-4252-8114-1c88aa318fd1" Title="GetBucketProperties Method " Url="html/Overload_RiakClient_RiakClient_GetBucketProperties.htm">
+            <HelpTOCNode Title="GetBucketProperties Method (String)" Url="html/M_RiakClient_RiakClient_GetBucketProperties.htm" />
+            <HelpTOCNode Title="GetBucketProperties Method (String, String)" Url="html/M_RiakClient_RiakClient_GetBucketProperties_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetCounter Method " Url="html/M_RiakClient_RiakClient_GetCounter.htm" />
+          <HelpTOCNode Title="GetSearchIndex Method " Url="html/M_RiakClient_RiakClient_GetSearchIndex.htm" />
+          <HelpTOCNode Title="GetSearchSchema Method " Url="html/M_RiakClient_RiakClient_GetSearchSchema.htm" />
+          <HelpTOCNode Id="8afe719d-e294-4abe-8b53-296878b03894" Title="GetSecondaryIndex Method " Url="html/Overload_RiakClient_RiakClient_GetSecondaryIndex.htm">
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_GetSecondaryIndex.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, String, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_GetSecondaryIndex_2.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, BigInteger, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_GetSecondaryIndex_1.htm" />
+            <HelpTOCNode Title="GetSecondaryIndex Method (RiakIndexId, String, String, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_GetSecondaryIndex_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetServerInfo Method " Url="html/M_RiakClient_RiakClient_GetServerInfo.htm" />
+          <HelpTOCNode Title="GetServerStatus Method " Url="html/M_RiakClient_RiakClient_GetServerStatus.htm" />
+          <HelpTOCNode Title="IncrementCounter Method " Url="html/M_RiakClient_RiakClient_IncrementCounter.htm" />
+          <HelpTOCNode Id="7c3d538d-b9a4-445f-a82a-7bbdea022875" Title="ListBuckets Method " Url="html/Overload_RiakClient_RiakClient_ListBuckets.htm">
+            <HelpTOCNode Title="ListBuckets Method " Url="html/M_RiakClient_RiakClient_ListBuckets.htm" />
+            <HelpTOCNode Title="ListBuckets Method (String)" Url="html/M_RiakClient_RiakClient_ListBuckets_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9ec24889-7e6d-4478-ac57-601a006b1951" Title="ListKeys Method " Url="html/Overload_RiakClient_RiakClient_ListKeys.htm">
+            <HelpTOCNode Title="ListKeys Method (String)" Url="html/M_RiakClient_RiakClient_ListKeys.htm" />
+            <HelpTOCNode Title="ListKeys Method (String, String)" Url="html/M_RiakClient_RiakClient_ListKeys_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f36eb4e1-7c0a-48c6-9cf3-cd9987b42e12" Title="ListKeysFromIndex Method " Url="html/Overload_RiakClient_RiakClient_ListKeysFromIndex.htm">
+            <HelpTOCNode Title="ListKeysFromIndex Method (String)" Url="html/M_RiakClient_RiakClient_ListKeysFromIndex.htm" />
+            <HelpTOCNode Title="ListKeysFromIndex Method (String, String)" Url="html/M_RiakClient_RiakClient_ListKeysFromIndex_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MapReduce Method " Url="html/M_RiakClient_RiakClient_MapReduce.htm" />
+          <HelpTOCNode Title="Ping Method " Url="html/M_RiakClient_RiakClient_Ping.htm" />
+          <HelpTOCNode Id="bb804fa5-6d60-49cd-8d1b-e4b6fc3af85a" Title="Put Method " Url="html/Overload_RiakClient_RiakClient_Put.htm">
+            <HelpTOCNode Title="Put Method (RiakObject, RiakPutOptions)" Url="html/M_RiakClient_RiakClient_Put.htm" />
+            <HelpTOCNode Title="Put Method (IEnumerable(RiakObject), RiakPutOptions)" Url="html/M_RiakClient_RiakClient_Put_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="PutSearchIndex Method " Url="html/M_RiakClient_RiakClient_PutSearchIndex.htm" />
+          <HelpTOCNode Title="PutSearchSchema Method " Url="html/M_RiakClient_RiakClient_PutSearchSchema.htm" />
+          <HelpTOCNode Id="80ae60f1-311e-45d4-9b60-e62cbb39ccad" Title="ResetBucketProperties Method " Url="html/Overload_RiakClient_RiakClient_ResetBucketProperties.htm">
+            <HelpTOCNode Title="ResetBucketProperties Method (String)" Url="html/M_RiakClient_RiakClient_ResetBucketProperties.htm" />
+            <HelpTOCNode Title="ResetBucketProperties Method (String, Boolean)" Url="html/M_RiakClient_RiakClient_ResetBucketProperties_1.htm" />
+            <HelpTOCNode Title="ResetBucketProperties Method (String, String)" Url="html/M_RiakClient_RiakClient_ResetBucketProperties_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Search Method " Url="html/M_RiakClient_RiakClient_Search.htm" />
+          <HelpTOCNode Id="efc99326-e70e-46fc-9bfa-3f189108403f" Title="SetBucketProperties Method " Url="html/Overload_RiakClient_RiakClient_SetBucketProperties.htm">
+            <HelpTOCNode Title="SetBucketProperties Method (String, RiakBucketProperties)" Url="html/M_RiakClient_RiakClient_SetBucketProperties.htm" />
+            <HelpTOCNode Title="SetBucketProperties Method (String, RiakBucketProperties, Boolean)" Url="html/M_RiakClient_RiakClient_SetBucketProperties_1.htm" />
+            <HelpTOCNode Title="SetBucketProperties Method (String, String, RiakBucketProperties)" Url="html/M_RiakClient_RiakClient_SetBucketProperties_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="8d43ddc1-8f4e-417e-a20d-d686d2a41241" Title="StreamGetSecondaryIndex Method " Url="html/Overload_RiakClient_RiakClient_StreamGetSecondaryIndex.htm">
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_StreamGetSecondaryIndex.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, String, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_StreamGetSecondaryIndex_2.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, BigInteger, BigInteger, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_StreamGetSecondaryIndex_1.htm" />
+            <HelpTOCNode Title="StreamGetSecondaryIndex Method (RiakIndexId, String, String, RiakIndexGetOptions)" Url="html/M_RiakClient_RiakClient_StreamGetSecondaryIndex_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StreamListBuckets Method " Url="html/M_RiakClient_RiakClient_StreamListBuckets.htm" />
+          <HelpTOCNode Id="14038602-6b7c-4fe1-9219-2c28a4b03518" Title="StreamListKeys Method " Url="html/Overload_RiakClient_RiakClient_StreamListKeys.htm">
+            <HelpTOCNode Title="StreamListKeys Method (String)" Url="html/M_RiakClient_RiakClient_StreamListKeys.htm" />
+            <HelpTOCNode Title="StreamListKeys Method (String, String)" Url="html/M_RiakClient_RiakClient_StreamListKeys_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="StreamMapReduce Method " Url="html/M_RiakClient_RiakClient_StreamMapReduce.htm" />
+          <HelpTOCNode Title="WalkLinks Method " Url="html/M_RiakClient_RiakClient_WalkLinks.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7cbc7100-6f8a-4c65-9860-86d13c21defe" Title="RiakClient Properties" Url="html/Properties_T_RiakClient_RiakClient.htm">
+          <HelpTOCNode Title="Async Property " Url="html/P_RiakClient_RiakClient_Async.htm" />
+          <HelpTOCNode Title="RetryCount Property " Url="html/P_RiakClient_RiakClient_RetryCount.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ed2d3f46-5dc2-4d71-8eea-39cc78e6e069" Title="RiakCluster Class" Url="html/T_RiakClient_RiakCluster.htm">
+        <HelpTOCNode Title="RiakCluster Constructor " Url="html/M_RiakClient_RiakCluster__ctor.htm" />
+        <HelpTOCNode Id="02daed24-b179-461d-83ec-1cea4f60ffaf" Title="RiakCluster Methods" Url="html/Methods_T_RiakClient_RiakCluster.htm">
+          <HelpTOCNode Id="367750b8-29f8-4843-979b-c575ee5f64fb" Title="Dispose Method " Url="html/Overload_RiakClient_RiakCluster_Dispose.htm">
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/M_RiakClient_RiakCluster_Dispose.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="88dd5ba7-d2ef-4cc0-a610-760760db35d4" Title="FromConfig Method " Url="html/Overload_RiakClient_RiakCluster_FromConfig.htm">
+            <HelpTOCNode Title="FromConfig Method (String)" Url="html/M_RiakClient_RiakCluster_FromConfig.htm" />
+            <HelpTOCNode Title="FromConfig Method (String, String)" Url="html/M_RiakClient_RiakCluster_FromConfig_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="87d1529f-36b7-4b55-a7d8-9180537ed1eb" Title="UseConnection Method " Url="html/Overload_RiakClient_RiakCluster_UseConnection.htm">
+            <HelpTOCNode Title="UseConnection(TRiakResult) Method (Func(IRiakConnection, TRiakResult), Func(ResultCode, String, Boolean, TRiakResult), Int32)" Url="html/M_RiakClient_RiakCluster_UseConnection__1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="bd0ec32f-594e-4a6f-9849-ed93107f05bf" Title="UseDelayedConnection Method " Url="html/Overload_RiakClient_RiakCluster_UseDelayedConnection.htm">
+            <HelpTOCNode Title="UseDelayedConnection(TResult) Method (Func(IRiakConnection, Action, RiakResult(IEnumerable(TResult))), Int32)" Url="html/M_RiakClient_RiakCluster_UseDelayedConnection__1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="8f37d389-2067-49a9-9249-27970e8be831" Title="RiakCluster Properties" Url="html/Properties_T_RiakClient_RiakCluster.htm">
+          <HelpTOCNode Title="DefaultRetryCount Property " Url="html/P_RiakClient_RiakCluster_DefaultRetryCount.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="e39e1a07-5307-4758-b8dc-820f8bc37edc" Title="RiakConstants Class" Url="html/T_RiakClient_RiakConstants.htm">
+        <HelpTOCNode Id="764424f9-1277-4f07-8643-4ed626a650a0" Title="RiakConstants Fields" Url="html/Fields_T_RiakClient_RiakConstants.htm">
+          <HelpTOCNode Title="DefaultBucketType Field" Url="html/F_RiakClient_RiakConstants_DefaultBucketType.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5ee03a39-4be6-4134-b27f-49d9be9162a0" Title="RiakConstants.CharSets Class" Url="html/T_RiakClient_RiakConstants_CharSets.htm">
+        <HelpTOCNode Id="d7c6fcda-507d-4c78-b93b-45acadcfb359" Title="CharSets Fields" Url="html/Fields_T_RiakClient_RiakConstants_CharSets.htm">
+          <HelpTOCNode Title="Binary Field" Url="html/F_RiakClient_RiakConstants_CharSets_Binary.htm" />
+          <HelpTOCNode Title="Utf8 Field" Url="html/F_RiakClient_RiakConstants_CharSets_Utf8.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c38218af-1f93-4362-8069-a0ec341eccef" Title="RiakConstants.ContentTypes Class" Url="html/T_RiakClient_RiakConstants_ContentTypes.htm">
+        <HelpTOCNode Id="61be197c-8ac6-4a71-950a-3fe5cb60a0a3" Title="ContentTypes Fields" Url="html/Fields_T_RiakClient_RiakConstants_ContentTypes.htm">
+          <HelpTOCNode Title="Any Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_Any.htm" />
+          <HelpTOCNode Title="ApplicationJson Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ApplicationJson.htm" />
+          <HelpTOCNode Title="ApplicationOctetStream Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ApplicationOctetStream.htm" />
+          <HelpTOCNode Title="ErlangBinary Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ErlangBinary.htm" />
+          <HelpTOCNode Title="ImageGif Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ImageGif.htm" />
+          <HelpTOCNode Title="ImageJpg Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ImageJpg.htm" />
+          <HelpTOCNode Title="ImagePng Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ImagePng.htm" />
+          <HelpTOCNode Title="MultipartMixed Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_MultipartMixed.htm" />
+          <HelpTOCNode Title="ProtocolBuffers Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_ProtocolBuffers.htm" />
+          <HelpTOCNode Title="TextHtml Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_TextHtml.htm" />
+          <HelpTOCNode Title="TextPlain Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_TextPlain.htm" />
+          <HelpTOCNode Title="Xml Field" Url="html/F_RiakClient_RiakConstants_ContentTypes_Xml.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="71514379-f44f-444d-990d-9b0de31b7082" Title="RiakConstants.Defaults Class" Url="html/T_RiakClient_RiakConstants_Defaults.htm">
+        <HelpTOCNode Id="0940db32-1fe8-447c-9215-64f5b78ec511" Title="Defaults Fields" Url="html/Fields_T_RiakClient_RiakConstants_Defaults.htm">
+          <HelpTOCNode Title="CharSet Field" Url="html/F_RiakClient_RiakConstants_Defaults_CharSet.htm" />
+          <HelpTOCNode Title="ContentType Field" Url="html/F_RiakClient_RiakConstants_Defaults_ContentType.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="8841e7ae-e90c-46f2-9242-4c43c1225868" Title="RiakConstants.Defaults.Rest Class" Url="html/T_RiakClient_RiakConstants_Defaults_Rest.htm">
+        <HelpTOCNode Id="c1147728-6b70-4797-9ac2-4a1ac04204c8" Title="Rest Fields" Url="html/Fields_T_RiakClient_RiakConstants_Defaults_Rest.htm">
+          <HelpTOCNode Title="Timeout Field" Url="html/F_RiakClient_RiakConstants_Defaults_Rest_Timeout.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="513aebe3-5f6b-4b22-bccf-6ef5aaea1658" Title="RiakConstants.Defaults.YokozunaIndex Class" Url="html/T_RiakClient_RiakConstants_Defaults_YokozunaIndex.htm">
+        <HelpTOCNode Id="5a1ab927-9312-418d-8edd-47aa2117049c" Title="YokozunaIndex Fields" Url="html/Fields_T_RiakClient_RiakConstants_Defaults_YokozunaIndex.htm">
+          <HelpTOCNode Title="IndexName Field" Url="html/F_RiakClient_RiakConstants_Defaults_YokozunaIndex_IndexName.htm" />
+          <HelpTOCNode Title="NVal Field" Url="html/F_RiakClient_RiakConstants_Defaults_YokozunaIndex_NVal.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d4066635-99a9-4770-989b-ce91ad6c1db6" Title="RiakConstants.IndexSuffix Class" Url="html/T_RiakClient_RiakConstants_IndexSuffix.htm">
+        <HelpTOCNode Id="7f05afd2-1d38-4445-87f3-adec5a4b2213" Title="IndexSuffix Fields" Url="html/Fields_T_RiakClient_RiakConstants_IndexSuffix.htm">
+          <HelpTOCNode Title="Binary Field" Url="html/F_RiakClient_RiakConstants_IndexSuffix_Binary.htm" />
+          <HelpTOCNode Title="Integer Field" Url="html/F_RiakClient_RiakConstants_IndexSuffix_Integer.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4a0d84c0-928c-44f5-a8aa-f7fbf1f6cf16" Title="RiakConstants.KeyFilterTransforms Class" Url="html/T_RiakClient_RiakConstants_KeyFilterTransforms.htm">
+        <HelpTOCNode Id="827d2c47-5f09-44a0-8314-fe535cc607fc" Title="KeyFilterTransforms Fields" Url="html/Fields_T_RiakClient_RiakConstants_KeyFilterTransforms.htm">
+          <HelpTOCNode Title="FloatToString Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_FloatToString.htm" />
+          <HelpTOCNode Title="IntToString Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_IntToString.htm" />
+          <HelpTOCNode Title="StringToFloat Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_StringToFloat.htm" />
+          <HelpTOCNode Title="StringToInt Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_StringToInt.htm" />
+          <HelpTOCNode Title="Tokenize Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_Tokenize.htm" />
+          <HelpTOCNode Title="ToLower Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_ToLower.htm" />
+          <HelpTOCNode Title="ToUpper Field" Url="html/F_RiakClient_RiakConstants_KeyFilterTransforms_ToUpper.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="13f7c6a1-bb27-44c8-9286-1dec278abba9" Title="RiakConstants.MapReduceLanguage Class" Url="html/T_RiakClient_RiakConstants_MapReduceLanguage.htm">
+        <HelpTOCNode Id="189737a2-c1c1-4ceb-a02a-bf0112fda3cb" Title="MapReduceLanguage Fields" Url="html/Fields_T_RiakClient_RiakConstants_MapReduceLanguage.htm">
+          <HelpTOCNode Title="Erlang Field" Url="html/F_RiakClient_RiakConstants_MapReduceLanguage_Erlang.htm" />
+          <HelpTOCNode Title="JavaScript Field" Url="html/F_RiakClient_RiakConstants_MapReduceLanguage_JavaScript.htm" />
+          <HelpTOCNode Title="Json Field" Url="html/F_RiakClient_RiakConstants_MapReduceLanguage_Json.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="214d9211-3710-4d4a-89b2-f56c1dae7bb9" Title="RiakConstants.MapReducePhaseType Class" Url="html/T_RiakClient_RiakConstants_MapReducePhaseType.htm">
+        <HelpTOCNode Id="d11fcfcb-1fcc-478a-9e70-2a2da68b9db1" Title="MapReducePhaseType Fields" Url="html/Fields_T_RiakClient_RiakConstants_MapReducePhaseType.htm">
+          <HelpTOCNode Title="Link Field" Url="html/F_RiakClient_RiakConstants_MapReducePhaseType_Link.htm" />
+          <HelpTOCNode Title="Map Field" Url="html/F_RiakClient_RiakConstants_MapReducePhaseType_Map.htm" />
+          <HelpTOCNode Title="Reduce Field" Url="html/F_RiakClient_RiakConstants_MapReducePhaseType_Reduce.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="705771af-5bbf-405a-b5ff-d78f503138d3" Title="RiakConstants.Rest Class" Url="html/T_RiakClient_RiakConstants_Rest.htm">
+        <HelpTOCNode Id="1990300c-15b9-4d81-a324-e33f9bc2fe20" Title="Rest Fields" Url="html/Fields_T_RiakClient_RiakConstants_Rest.htm">
+          <HelpTOCNode Title="UserAgent Field" Url="html/F_RiakClient_RiakConstants_Rest_UserAgent.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="580933de-98eb-4e49-b4a5-88b099b8c80a" Title="RiakConstants.Rest.HttpHeaders Class" Url="html/T_RiakClient_RiakConstants_Rest_HttpHeaders.htm">
+        <HelpTOCNode Id="caf86d21-bcbb-4560-958d-63c3c745e30f" Title="HttpHeaders Fields" Url="html/Fields_T_RiakClient_RiakConstants_Rest_HttpHeaders.htm">
+          <HelpTOCNode Title="DisableCacheKey Field" Url="html/F_RiakClient_RiakConstants_Rest_HttpHeaders_DisableCacheKey.htm" />
+          <HelpTOCNode Title="DisableCacheValue Field" Url="html/F_RiakClient_RiakConstants_Rest_HttpHeaders_DisableCacheValue.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1c804d74-2910-419a-8d6e-e9b6d0b88207" Title="RiakConstants.Rest.HttpMethod Class" Url="html/T_RiakClient_RiakConstants_Rest_HttpMethod.htm">
+        <HelpTOCNode Id="0692c93b-fc50-4eb4-b4e7-93cfcfbf0a01" Title="HttpMethod Fields" Url="html/Fields_T_RiakClient_RiakConstants_Rest_HttpMethod.htm">
+          <HelpTOCNode Title="Delete Field" Url="html/F_RiakClient_RiakConstants_Rest_HttpMethod_Delete.htm" />
+          <HelpTOCNode Title="Get Field" Url="html/F_RiakClient_RiakConstants_Rest_HttpMethod_Get.htm" />
+          <HelpTOCNode Title="Post Field" Url="html/F_RiakClient_RiakConstants_Rest_HttpMethod_Post.htm" />
+          <HelpTOCNode Title="Put Field" Url="html/F_RiakClient_RiakConstants_Rest_HttpMethod_Put.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="RiakConstants.Rest.QueryParameters Class" Url="html/T_RiakClient_RiakConstants_Rest_QueryParameters.htm" />
+      <HelpTOCNode Id="c7dd537c-c4c2-4e7d-9c0b-a87c9e79bcdb" Title="RiakConstants.Rest.QueryParameters.Bucket Class" Url="html/T_RiakClient_RiakConstants_Rest_QueryParameters_Bucket.htm">
+        <HelpTOCNode Id="26af6d2c-8470-41e5-b463-4c9580d58a5b" Title="Bucket Fields" Url="html/Fields_T_RiakClient_RiakConstants_Rest_QueryParameters_Bucket.htm">
+          <HelpTOCNode Title="GetPropertiesKey Field" Url="html/F_RiakClient_RiakConstants_Rest_QueryParameters_Bucket_GetPropertiesKey.htm" />
+          <HelpTOCNode Title="GetPropertiesValue Field" Url="html/F_RiakClient_RiakConstants_Rest_QueryParameters_Bucket_GetPropertiesValue.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d63df52c-c57e-4df1-882a-f2948f9e1ef0" Title="RiakConstants.Rest.Scheme Class" Url="html/T_RiakClient_RiakConstants_Rest_Scheme.htm">
+        <HelpTOCNode Id="6a9e4e68-e93d-4c4c-b26f-1350ea813c40" Title="Scheme Fields" Url="html/Fields_T_RiakClient_RiakConstants_Rest_Scheme.htm">
+          <HelpTOCNode Title="Ssl Field" Url="html/F_RiakClient_RiakConstants_Rest_Scheme_Ssl.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b8f5f02a-fc3b-4a59-b686-eceeac5094d7" Title="RiakConstants.Rest.Uri Class" Url="html/T_RiakClient_RiakConstants_Rest_Uri.htm">
+        <HelpTOCNode Id="2085f29d-f80a-4e04-a1f8-8ab07ea4eed1" Title="Uri Fields" Url="html/Fields_T_RiakClient_RiakConstants_Rest_Uri.htm">
+          <HelpTOCNode Title="BucketPropsFmt Field" Url="html/F_RiakClient_RiakConstants_Rest_Uri_BucketPropsFmt.htm" />
+          <HelpTOCNode Title="MapReduce Field" Url="html/F_RiakClient_RiakConstants_Rest_Uri_MapReduce.htm" />
+          <HelpTOCNode Title="RiakRoot Field" Url="html/F_RiakClient_RiakConstants_Rest_Uri_RiakRoot.htm" />
+          <HelpTOCNode Title="StatsRoot Field" Url="html/F_RiakClient_RiakConstants_Rest_Uri_StatsRoot.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Title="RiakConstants.RiakEnterprise Class" Url="html/T_RiakClient_RiakConstants_RiakEnterprise.htm" />
+      <HelpTOCNode Title="RiakConstants.RiakEnterprise.ReplicationMode Enumeration" Url="html/T_RiakClient_RiakConstants_RiakEnterprise_ReplicationMode.htm" />
+      <HelpTOCNode Id="b007c74e-2ef1-448c-80ab-305436604253" Title="RiakConstants.SearchFieldKeys Class" Url="html/T_RiakClient_RiakConstants_SearchFieldKeys.htm">
+        <HelpTOCNode Id="10768ac5-9368-41f6-865a-d5027b877b37" Title="SearchFieldKeys Fields" Url="html/Fields_T_RiakClient_RiakConstants_SearchFieldKeys.htm">
+          <HelpTOCNode Title="Bucket Field" Url="html/F_RiakClient_RiakConstants_SearchFieldKeys_Bucket.htm" />
+          <HelpTOCNode Title="BucketType Field" Url="html/F_RiakClient_RiakConstants_SearchFieldKeys_BucketType.htm" />
+          <HelpTOCNode Title="Id Field" Url="html/F_RiakClient_RiakConstants_SearchFieldKeys_Id.htm" />
+          <HelpTOCNode Title="Key Field" Url="html/F_RiakClient_RiakConstants_SearchFieldKeys_Key.htm" />
+          <HelpTOCNode Title="LegacySearchId Field" Url="html/F_RiakClient_RiakConstants_SearchFieldKeys_LegacySearchId.htm" />
+          <HelpTOCNode Title="Score Field" Url="html/F_RiakClient_RiakConstants_SearchFieldKeys_Score.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="0fa3cd45-a073-440a-91c9-99621c5d72a6" Title="RiakConstants.SystemIndexKeys Class" Url="html/T_RiakClient_RiakConstants_SystemIndexKeys.htm">
+        <HelpTOCNode Id="a448c59f-41ec-487f-8487-7b57768fd624" Title="SystemIndexKeys Fields" Url="html/Fields_T_RiakClient_RiakConstants_SystemIndexKeys.htm">
+          <HelpTOCNode Title="RiakBucketIndex Field" Url="html/F_RiakClient_RiakConstants_SystemIndexKeys_RiakBucketIndex.htm" />
+          <HelpTOCNode Title="RiakKeysIndex Field" Url="html/F_RiakClient_RiakConstants_SystemIndexKeys_RiakKeysIndex.htm" />
+          <HelpTOCNode Title="SystemBinKeys Field" Url="html/F_RiakClient_RiakConstants_SystemIndexKeys_SystemBinKeys.htm" />
+          <HelpTOCNode Title="SystemIntKeys Field" Url="html/F_RiakClient_RiakConstants_SystemIndexKeys_SystemIntKeys.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="b1e7fa38-c952-40a0-ac70-276cc0af8c19" Title="RiakEndPoint Class" Url="html/T_RiakClient_RiakEndPoint.htm">
+        <HelpTOCNode Title="RiakEndPoint Constructor " Url="html/M_RiakClient_RiakEndPoint__ctor.htm" />
+        <HelpTOCNode Id="2659c1e9-269a-4096-bffd-6ad5dea03ef3" Title="RiakEndPoint Methods" Url="html/Methods_T_RiakClient_RiakEndPoint.htm">
+          <HelpTOCNode Title="CreateClient Method " Url="html/M_RiakClient_RiakEndPoint_CreateClient.htm" />
+          <HelpTOCNode Id="f7cb4073-bbea-480e-917f-7bf9b3f37e17" Title="Dispose Method " Url="html/Overload_RiakClient_RiakEndPoint_Dispose.htm">
+            <HelpTOCNode Title="Dispose Method " Url="html/M_RiakClient_RiakEndPoint_Dispose.htm" />
+            <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/M_RiakClient_RiakEndPoint_Dispose_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e42124c1-4039-4ee0-833c-8c8090b92a29" Title="UseConnection Method " Url="html/Overload_RiakClient_RiakEndPoint_UseConnection.htm">
+            <HelpTOCNode Title="UseConnection(TResult) Method (Func(IRiakConnection, RiakResult(TResult)), Int32)" Url="html/M_RiakClient_RiakEndPoint_UseConnection__1.htm" />
+            <HelpTOCNode Title="UseConnection Method (Func(IRiakConnection, RiakResult), Int32)" Url="html/M_RiakClient_RiakEndPoint_UseConnection.htm" />
+            <HelpTOCNode Title="UseConnection(TRiakResult) Method (Func(IRiakConnection, TRiakResult), Func(ResultCode, String, Boolean, TRiakResult), Int32)" Url="html/M_RiakClient_RiakEndPoint_UseConnection__1_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="UseDelayedConnection(TResult) Method " Url="html/M_RiakClient_RiakEndPoint_UseDelayedConnection__1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="99613b65-66f4-4aee-adee-ecdff4d2f188" Title="RiakEndPoint Properties" Url="html/Properties_T_RiakClient_RiakEndPoint.htm">
+          <HelpTOCNode Title="DefaultRetryCount Property " Url="html/P_RiakClient_RiakEndPoint_DefaultRetryCount.htm" />
+          <HelpTOCNode Title="RetryWaitTime Property " Url="html/P_RiakClient_RiakEndPoint_RetryWaitTime.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="06e4e7c0-853c-464d-9881-7b533473ca22" Title="RiakResult Class" Url="html/T_RiakClient_RiakResult.htm">
+        <HelpTOCNode Title="RiakResult Constructor " Url="html/M_RiakClient_RiakResult__ctor.htm" />
+        <HelpTOCNode Title="RiakResult Methods" Url="html/Methods_T_RiakClient_RiakResult.htm" />
+        <HelpTOCNode Id="c4de55cd-5e86-4035-94ff-f026487743dd" Title="RiakResult Properties" Url="html/Properties_T_RiakClient_RiakResult.htm">
+          <HelpTOCNode Title="ErrorMessage Property " Url="html/P_RiakClient_RiakResult_ErrorMessage.htm" />
+          <HelpTOCNode Title="IsSuccess Property " Url="html/P_RiakClient_RiakResult_IsSuccess.htm" />
+          <HelpTOCNode Title="ResultCode Property " Url="html/P_RiakClient_RiakResult_ResultCode.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="16f58e37-7b06-4ad8-ae07-f786e49018d3" Title="RiakResult(TResult) Class" Url="html/T_RiakClient_RiakResult_1.htm">
+        <HelpTOCNode Id="9b0792ef-13df-4c55-83d9-837dcda56c37" Title="RiakResult(TResult) Methods" Url="html/Methods_T_RiakClient_RiakResult_1.htm">
+          <HelpTOCNode Id="4fd46c03-405c-499c-b85c-7c156b529476" Title="Equals Method " Url="html/Overload_RiakClient_RiakResult_1_Equals.htm">
+            <HelpTOCNode Title="Equals Method (Object)" Url="html/M_RiakClient_RiakResult_1_Equals_1.htm" />
+            <HelpTOCNode Title="Equals Method (RiakResult(TResult))" Url="html/M_RiakClient_RiakResult_1_Equals.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetHashCode Method " Url="html/M_RiakClient_RiakResult_1_GetHashCode.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="94eb8e6d-eb3b-477f-8dbf-74ba7b0f7de0" Title="RiakResult(TResult) Properties" Url="html/Properties_T_RiakClient_RiakResult_1.htm">
+          <HelpTOCNode Title="Continuation Property " Url="html/P_RiakClient_RiakResult_1_Continuation.htm" />
+          <HelpTOCNode Title="Done Property " Url="html/P_RiakClient_RiakResult_1_Done.htm" />
+          <HelpTOCNode Title="Value Property " Url="html/P_RiakClient_RiakResult_1_Value.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="4a40226e-0a49-43d1-9ec7-6ec9026b134e" Title="Timeout Class" Url="html/T_RiakClient_Timeout.htm">
+        <HelpTOCNode Id="eeda9f84-a62f-4baa-ba73-8c0a29f5c6a8" Title="Timeout Constructor " Url="html/Overload_RiakClient_Timeout__ctor.htm">
+          <HelpTOCNode Title="Timeout Constructor (Int32)" Url="html/M_RiakClient_Timeout__ctor.htm" />
+          <HelpTOCNode Title="Timeout Constructor (TimeSpan)" Url="html/M_RiakClient_Timeout__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="37972f8d-3632-40bc-9cc9-c50b4d2150c7" Title="Timeout Methods" Url="html/Methods_T_RiakClient_Timeout.htm">
+          <HelpTOCNode Id="03a93d5d-9b4a-4cbe-a4e1-eb93d71ae945" Title="Equals Method " Url="html/Overload_RiakClient_Timeout_Equals.htm">
+            <HelpTOCNode Title="Equals Method (Object)" Url="html/M_RiakClient_Timeout_Equals_1.htm" />
+            <HelpTOCNode Title="Equals Method (Timeout)" Url="html/M_RiakClient_Timeout_Equals.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GetHashCode Method " Url="html/M_RiakClient_Timeout_GetHashCode.htm" />
+          <HelpTOCNode Title="ToString Method " Url="html/M_RiakClient_Timeout_ToString.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="fd8d60f6-007c-4c92-9518-d3381cb1d62f" Title="Timeout Type Conversions" Url="html/Operators_T_RiakClient_Timeout.htm">
+          <HelpTOCNode Id="7377e6ba-77cc-4c18-b23c-d634331bef8a" Title="Explicit Conversion Operators" Url="html/Overload_RiakClient_Timeout_op_Explicit.htm">
+            <HelpTOCNode Title="Explicit Conversion (Int32 to Timeout)" Url="html/M_RiakClient_Timeout_op_Explicit_2.htm" />
+            <HelpTOCNode Title="Explicit Conversion (Timeout to Int32)" Url="html/M_RiakClient_Timeout_op_Explicit.htm" />
+            <HelpTOCNode Title="Explicit Conversion (Timeout to UInt32)" Url="html/M_RiakClient_Timeout_op_Explicit_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="582d40e5-9df7-4f98-9b20-efbe35138c1e" Title="Implicit Conversion Operators" Url="html/Overload_RiakClient_Timeout_op_Implicit.htm">
+            <HelpTOCNode Title="Implicit Conversion (Timeout to TimeSpan)" Url="html/M_RiakClient_Timeout_op_Implicit.htm" />
+            <HelpTOCNode Title="Implicit Conversion (Timeout to String)" Url="html/M_RiakClient_Timeout_op_Implicit_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
