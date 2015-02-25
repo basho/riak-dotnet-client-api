@@ -62,7 +62,7 @@ html>body .pageright            { height: auto; }
 
 .pageleft                       { position: fixed; top: 0; left: 0;  text-align: right; }
 
-.pageleft                       { color: #fff; background:#4e4e4e url('''../images/iron.jpg''') top right; padding: 0; left: 0; width: 35%; text-align: right; overflow: hidden; }
+.pageleft                       { color: #fff; background:#4e4e4e url('../images/iron.jpg') top right; padding: 0; left: 0; width: 35%; text-align: right; overflow: hidden; }
 .pageright                      { color: #555; background:#ffffff; padding: 0; width:60%; left: 35%; text-align: left; overflow: hidden; }
 
 .content                        { margin:0px;     }
@@ -162,13 +162,13 @@ ul.port_box p                           { line-height:normal; }
 ul.port_box li                          { -moz-box-shadow:0 0 5px #aaa; -webkit-box-shadow:0 0 5px #aaa; box-shadow:0 0 5px #aaa; border:1px solid #fff; }
 
 ul.port_box li .loading                 { text-align:center; display:block; width:200px; height:100px; }
-ul.port_box li .loading                 { background: url('''../images/ajax-loader.gif''') no-repeat center center; }
+ul.port_box li .loading                 { background: url('../images/ajax-loader.gif') no-repeat center center; }
 
 ul.port_box li a img, ul.port_box li a:hover img            { position:relative; z-index:1; }
 
 ul.port_box li.featured                 { background:#e0f1ff; }
 
-.featured_project                       { background:url('''../images/featured_project.png''') top right no-repeat; position:absolute; top:0px; right:0; width:200px; height:100px; }
+.featured_project                       { background:url('../images/featured_project.png') top right no-repeat; position:absolute; top:0px; right:0; width:200px; height:100px; }
 
 
 .hover_video                            { position: absolute; background:transparent url(''../images/video.png'') no-repeat center center;}
