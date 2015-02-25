@@ -1,6 +1,6 @@
 
 .pikachoose{width:auto; margin:0 auto 30px auto;  }
-/* This is the ul you have all your images in */
+/* This is the ul you have all your ../images in */
 .pikachoose ul{padding-left:0;width:520px;height:50px;margin:0;overflow:hidden;  margin-top:0px;}
 .pikachoose ul li{float: left;border:1px solid #ccc;padding:0px; margin:0 6px 6px 0;position:relative;overflow:hidden;}
 .pikachoose ul li div img{position:relative;cursor:pointer;}

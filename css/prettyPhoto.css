@@ -1,9 +1,9 @@
 div.light_rounded .pp_top .pp_left {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -88px -53px no-repeat;
 }
 
 div.light_rounded .pp_top .pp_right {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -110px -53px no-repeat;
 }
 
 div.light_rounded .pp_content {
@@ -11,275 +11,275 @@ background-color:#fff;
 }
 
 div.light_rounded .pp_next:hover {
-background:url(images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;
+background:url(../images/prettyPhoto/light_rounded/btnNext.png) center right no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_previous:hover {
-background:url(images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;
+background:url(../images/prettyPhoto/light_rounded/btnPrevious.png) center left no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_expand {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -31px -26px no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_expand:hover {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -31px -47px no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_contract {
-background:url(images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) 0 -26px no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_contract:hover {
-background:url(images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) 0 -47px no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_close {
 width:75px;
 height:22px;
-background:url(images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -1px -1px no-repeat;
 cursor:pointer;
 }
 
 div.light_rounded .pp_arrow_previous {
-background:url(images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) 0 -71px no-repeat;
 }
 
 div.light_rounded .pp_arrow_next {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -22px -71px no-repeat;
 }
 
 div.light_rounded .pp_bottom .pp_left {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -88px -80px no-repeat;
 }
 
 div.light_rounded .pp_bottom .pp_right {
-background:url(images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/sprite.png) -110px -80px no-repeat;
 }
 
 div.light_rounded .pp_loaderIcon {
-background:url(images/prettyPhoto/light_rounded/loader.gif) center center no-repeat;
+background:url(../images/prettyPhoto/light_rounded/loader.gif) center center no-repeat;
 }
 
 div.dark_rounded .pp_top .pp_left {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -88px -53px no-repeat;
 }
 
 div.dark_rounded .pp_top .pp_right {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -110px -53px no-repeat;
 }
 
 div.dark_rounded .pp_next:hover {
-background:url(images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/btnNext.png) center right no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_previous:hover {
-background:url(images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/btnPrevious.png) center left no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_expand {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -31px -26px no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_expand:hover {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -31px -47px no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_contract {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) 0 -26px no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_contract:hover {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) 0 -47px no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_close {
 width:75px;
 height:22px;
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -1px -1px no-repeat;
 cursor:pointer;
 }
 
 div.dark_rounded .pp_arrow_previous {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) 0 -71px no-repeat;
 }
 
 div.dark_rounded .pp_arrow_next {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -22px -71px no-repeat;
 }
 
 div.dark_rounded .pp_bottom .pp_left {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -88px -80px no-repeat;
 }
 
 div.dark_rounded .pp_bottom .pp_right {
-background:url(images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/sprite.png) -110px -80px no-repeat;
 }
 
 div.dark_square .pp_left,div.dark_square .pp_middle,div.dark_square .pp_right,div.dark_square .pp_content {
-background:url(images/prettyPhoto/dark_square/contentPattern.png) top left repeat;
+background:url(../images/prettyPhoto/dark_square/contentPattern.png) top left repeat;
 }
 
 div.dark_square .pp_expand {
-background:url(images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) -31px -26px no-repeat;
 cursor:pointer;
 }
 
 div.dark_square .pp_expand:hover {
-background:url(images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) -31px -47px no-repeat;
 cursor:pointer;
 }
 
 div.dark_square .pp_contract {
-background:url(images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) 0 -26px no-repeat;
 cursor:pointer;
 }
 
 div.dark_square .pp_contract:hover {
-background:url(images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) 0 -47px no-repeat;
 cursor:pointer;
 }
 
 div.dark_square .pp_close {
 width:75px;
 height:22px;
-background:url(images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) -1px -1px no-repeat;
 cursor:pointer;
 }
 
 div.dark_square .pp_arrow_previous {
-background:url(images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) 0 -71px no-repeat;
 }
 
 div.dark_square .pp_arrow_next {
-background:url(images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat;
+background:url(../images/prettyPhoto/dark_square/sprite.png) -22px -71px no-repeat;
 }
 
 div.dark_square .pp_next:hover {
-background:url(images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;
+background:url(../images/prettyPhoto/dark_square/btnNext.png) center right no-repeat;
 cursor:pointer;
 }
 
 div.dark_square .pp_previous:hover {
-background:url(images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;
+background:url(../images/prettyPhoto/dark_square/btnPrevious.png) center left no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_expand {
-background:url(images/prettyPhoto/light_square/sprite.gif) -31px -26px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) -31px -26px no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_expand:hover {
-background:url(images/prettyPhoto/light_square/sprite.gif) -31px -47px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) -31px -47px no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_loaderIcon, div.light_square .pp_loaderIcon {
-background:url(images/prettyPhoto/light_square/loader.gif) center center no-repeat;
+background:url(../images/prettyPhoto/light_square/loader.gif) center center no-repeat;
 }
 
 
 div.light_square .pp_contract {
-background:url(images/prettyPhoto/light_square/sprite.gif) 0 -26px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) 0 -26px no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_contract:hover {
-background:url(images/prettyPhoto/light_square/sprite.gif) 0 -47px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) 0 -47px no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_close {
 width:75px;
 height:22px;
-background:url(images/prettyPhoto/light_square/sprite.gif) -1px -1px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) -1px -1px no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_arrow_previous {
-background:url(images/prettyPhoto/light_square/sprite.gif) 0 -71px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) 0 -71px no-repeat;
 }
 
 div.light_square .pp_arrow_next {
-background:url(images/prettyPhoto/light_square/sprite.gif) -22px -71px no-repeat;
+background:url(../images/prettyPhoto/light_square/sprite.gif) -22px -71px no-repeat;
 }
 
 div.light_square .pp_next:hover {
-background:url(images/prettyPhoto/light_square/btnNext.gif) center right no-repeat;
+background:url(../images/prettyPhoto/light_square/btnNext.gif) center right no-repeat;
 cursor:pointer;
 }
 
 div.light_square .pp_previous:hover {
-background:url(images/prettyPhoto/light_square/btnPrevious.gif) center left no-repeat;
+background:url(../images/prettyPhoto/light_square/btnPrevious.gif) center left no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_top .pp_left {
-background:url(images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -88px -53px no-repeat;
 }
 
 div.facebook .pp_top .pp_middle {
-background:url(images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x;
+background:url(../images/prettyPhoto/facebook/contentPatternTop.png) top left repeat-x;
 }
 
 div.facebook .pp_top .pp_right {
-background:url(images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -110px -53px no-repeat;
 }
 
 div.facebook .pp_content_container .pp_left {
-background:url(images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y;
+background:url(../images/prettyPhoto/facebook/contentPatternLeft.png) top left repeat-y;
 }
 
 div.facebook .pp_content_container .pp_right {
-background:url(images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y;
+background:url(../images/prettyPhoto/facebook/contentPatternRight.png) top right repeat-y;
 }
 
 div.facebook .pp_expand {
-background:url(images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -31px -26px no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_expand:hover {
-background:url(images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -31px -47px no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_contract {
-background:url(images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) 0 -26px no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_contract:hover {
-background:url(images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) 0 -47px no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_close {
 width:22px;
 height:22px;
-background:url(images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -1px -1px no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_loaderIcon {
-background:url(images/prettyPhoto/facebook/loader.gif) center center no-repeat;
+background:url(../images/prettyPhoto/facebook/loader.gif) center center no-repeat;
 }
 
 div.facebook .pp_nav .pp_arrow_previous {
-background:url(images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) 0 -71px no-repeat;
 height:22px;
 margin-top:0;
 width:22px;
@@ -291,7 +291,7 @@ cursor:default;
 }
 
 div.facebook .pp_nav .pp_arrow_next {
-background:url(images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -32px -71px no-repeat;
 height:22px;
 margin-top:0;
 width:22px;
@@ -312,25 +312,25 @@ padding:0 3px 0 4px;
 }
 
 div.facebook .pp_next:hover {
-background:url(images/prettyPhoto/facebook/btnNext.png) center right no-repeat;
+background:url(../images/prettyPhoto/facebook/btnNext.png) center right no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_previous:hover {
-background:url(images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;
+background:url(../images/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;
 cursor:pointer;
 }
 
 div.facebook .pp_bottom .pp_left {
-background:url(images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -88px -80px no-repeat;
 }
 
 div.facebook .pp_bottom .pp_middle {
-background:url(images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x;
+background:url(../images/prettyPhoto/facebook/contentPatternBottom.png) top left repeat-x;
 }
 
 div.facebook .pp_bottom .pp_right {
-background:url(images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat;
+background:url(../images/prettyPhoto/facebook/sprite.png) -110px -80px no-repeat;
 }
 
 div.pp_pic_holder a:focus {
@@ -422,7 +422,7 @@ z-index:2000;
 }
 
 a.pp_next {
-background:url(images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
 display:block;
 float:right;
 height:100%;
@@ -431,7 +431,7 @@ width:49%;
 }
 
 a.pp_previous {
-background:url(images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
+background:url(../images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;
 display:block;
 float:left;
 height:100%;
@@ -524,15 +524,15 @@ cursor:default;
 }
 
 div.dark_rounded .pp_top .pp_middle,div.dark_rounded .pp_content,div.dark_rounded .pp_bottom .pp_middle {
-background:url(images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat;
+background:url(../images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat;
 }
 
 div.dark_rounded .pp_content_container .pp_left,div.dark_square .pp_content_container .pp_left {
-background:url(images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y;
+background:url(../images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat-y;
 }
 
 div.dark_rounded .pp_content_container .pp_right,div.dark_square .pp_content_container .pp_right {
-background:url(images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y;
+background:url(../images/prettyPhoto/dark_rounded/contentPattern.png) top right repeat-y;
 }
 
 div.dark_rounded .currentTextHolder,div.dark_square .currentTextHolder {
@@ -544,7 +544,7 @@ color:#fff;
 }
 
 div.dark_rounded .pp_loaderIcon,div.dark_square .pp_loaderIcon {
-background:url(images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat;
+background:url(../images/prettyPhoto/dark_rounded/loader.gif) center center no-repeat;
 }
 
 .pp_top,.pp_bottom {
