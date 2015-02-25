@@ -12,7 +12,7 @@
 	right: 0;
 	top: 0;
 	height: 100%;
-	background: URL(../images/track.gif) top center scroll repeat-y;
+	background: url('../images/track.gif') top center scroll repeat-y;
 	-moz-border-radius:10px;
 	}
 .jScrollPaneDrag {
@@ -44,7 +44,7 @@ a.jScrollArrowUp {
 	overflow: hidden;
 	/*background-color: #666;*/
 	height: 10px;
-	background: URL(../images/arrowup.gif) top center no-repeat;
+	background: url('../images/arrowup.gif') top center no-repeat;
 
 }
 a.jScrollArrowUp:hover {
@@ -61,7 +61,7 @@ a.jScrollArrowDown {
 	overflow: hidden;
 	/*background-color: #666;*/
 	height: 10px;
-	background: URL(../images/arrowdown.gif) top center no-repeat;
+	background: url('../images/arrowdown.gif') top center no-repeat;
 }
 a.jScrollArrowDown:hover {
 	/*background-color: #f60;*/

@@ -14,7 +14,7 @@
 	min-width:520px;
 	min-height:300px;
 	margin:30px 0px 30px 5px;
-	background:#ffffff url(../images/ajax-loader.gif) no-repeat 50% 50%;
+	background:#ffffff url('../images/ajax-loader.gif') no-repeat 50% 50%;
 	-moz-box-shadow:0px 0px 5px #333;
 	-webkit-box-shadow:0px 0px 10px #333;
 	box-shadow:0px 0px 10px #333;
@@ -102,11 +102,11 @@
 	border:0;
 }
 a.nivo-nextNav {
-	background: url(../images/arrows.png) -30px 0 no-repeat;
+	background: url('../images/arrows.png') -30px 0 no-repeat;
 	right:10px;
 }
 a.nivo-prevNav {
-	background:url(../images/arrows.png) 0 center no-repeat;
+	background:url('../images/arrows.png') 0 center no-repeat;
 	left:10px;
 }
 
@@ -121,7 +121,7 @@ a.nivo-prevNav {
 	display:block;
 	width:10px;
 	height:10px;
-	background:url(../images/bullets.png) no-repeat;
+	background:url('../images/bullets.png') no-repeat;
 	text-indent:-9999px;
 	border:0;
 	margin-right:3px;
